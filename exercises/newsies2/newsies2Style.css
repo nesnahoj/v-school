@@ -1,0 +1,40 @@
+title {
+    font-family: fantasy;
+    font-size: 175px;
+<
+}
+
+head {
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: blueviolet;
+}
+
+h1 {
+    font-family: fantasy;
+    font-size: 36px;
+    color: orangered;
+    font: center;
+}
+
+img {
+    width: 100%;
+    float: left;
+}
+
+p {
+    font-size: 12px;
+    color: green;
+}
+
+.col {
+    width: 300px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+}

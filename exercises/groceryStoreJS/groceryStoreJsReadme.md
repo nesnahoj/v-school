@@ -1,0 +1,1 @@
+This is an exercise specifically focused on Javascript to create a simple shopping cart.

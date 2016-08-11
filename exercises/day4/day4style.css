@@ -1,0 +1,29 @@
+body{
+    background-color: burlywood;
+    background-position: right;
+    border-style: groove;
+    border-top-color: blueviolet;
+    border-right-color: aquamarine;
+    border-bottom-color: coral;
+    border-left-color: aqua;
+}
+
+h1{
+    
+}
+
+p{
+    font: fantasy;
+    font-size: 16px;
+    
+}
+
+a:hover {
+    text-decoration-color: darkgoldenrod;
+    background-color: bisque; 
+    color: pink;
+}
+
+ol {
+    
+}

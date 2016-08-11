@@ -1,0 +1,1 @@
+using using primarily CSS and HTML I created a grid of colors (not responsive), that had five styles.

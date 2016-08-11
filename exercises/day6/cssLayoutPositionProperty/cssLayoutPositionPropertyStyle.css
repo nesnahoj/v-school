@@ -1,0 +1,154 @@
+body {
+    height: 100%;
+    background-color: azure;
+    border-color: bisque;
+    border-width: medium;
+}
+
+.navbar {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg);
+    position: fixed;
+    height: 200px;
+    width: 100%;
+    background-color: lightgrey;
+    background-position: center;
+    color: blue;
+    font-family: sans-serif;
+    font-size: 48px;
+    text-align: center;
+    top: 0;
+    left: 0;
+} 
+
+.navbar ul li {
+    display: inline-block;
+    background-color:cornflowerblue;
+    margin: 120px 25px 0 25px;
+    float: right;
+    color: black;
+    font-family: sans-serif;
+    font-size: 24px;
+    text-align: center;    
+}
+
+.content {
+    margin-top: 250px;
+    height: 250px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
+}
+    
+h1 {
+    position: static;
+    font-size: 24px;
+    padding: 20px 0 0 0;
+}
+
+p {
+    font-size: 20px;
+}
+    
+a {
+    font-size: 14px;
+}
+
+.a {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+    display: inline;
+}
+
+.b {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+    float: center;
+    display: inline-block;
+}
+
+.c {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+    float: right;
+    display: inline-block;
+}
+
+.d {
+    position: static;
+    height: 10px;
+    width: 1000px;
+    border: 0px;
+    border-style: none;
+    align-items: center;
+    display: inline-block;
+}
+
+.e {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+    display: inline-block;
+}
+
+.f {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+    display: inline-block;
+}
+
+.g {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+    display: inline-block;
+}
+
+.h {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+}
+
+.i {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+}
+
+.j {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+}
+
+.k {
+    position: static;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-style: none;
+}

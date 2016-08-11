@@ -1,0 +1,14 @@
+body {
+    background: lightseagreen;
+    margin 10px;
+    border: 5px solid purple;
+    padding: 30px;
+}
+
+h1 {
+    color: teal;
+    font-size: 148px;
+    text-align: center;
+    color: aquamarine;
+    font-family: 'Niconne', cursive;
+}

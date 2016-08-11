@@ -1,0 +1,18 @@
+
+head{
+    
+}
+
+body {
+    background: beige;
+    border: 10px solid white;
+    
+}
+
+h1 {
+    font-family: 'Niconne', cursive;
+    text-align: center;
+    font-size: 75px;
+    background: teal;
+    color: lightblue; 
+}

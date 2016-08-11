@@ -1,0 +1,1 @@
+Newsies was intended to produce a 3 column structure using styling and utilized images from external sources as part of the content.

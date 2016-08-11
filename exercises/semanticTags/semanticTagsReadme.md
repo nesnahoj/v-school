@@ -1,0 +1,1 @@
+This exercise used html and CSS in more depth to create a navbar, side bar, footer andd 3 columns.  I styled the a little different than normal to show myself some of the versatility in styling.

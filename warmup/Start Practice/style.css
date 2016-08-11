@@ -1,0 +1,30 @@
+        head {
+        //some properties here
+            margin: 0;
+            padding: 50px;
+            border: 15px;
+            font-size: 124px;
+            color: blue;
+            background: green;
+        }
+        
+        h1 {
+        //some properties here
+            margin: 0;
+            padding: 75px;
+            border: 5px;
+            font-size: 48px;
+            color: forestgreen;
+            background: blue;
+        }
+        
+        h2 {
+        //some properties here    
+        }
+        
+        p {
+        //some properties here    
+        }
+        
+        // etc, etc, etc
+    

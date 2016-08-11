@@ -1,0 +1,54 @@
+html {
+    
+}
+
+head {
+    
+}
+
+body {
+    
+}
+
+header {
+
+}
+
+table {
+    
+}
+
+.thead {
+    background-color: burlywood;    
+}
+
+.tr1 {
+    color: blue;
+    background-color: lightgray;
+}
+    
+.tr2 {
+    color: red;
+}
+
+.tr3 {
+    color: green;
+    background-color: lightgray;
+}
+
+.tr4 {
+    color: gold;
+}
+
+.tr5 {
+    color: yellow;
+    background-color: lightgray;
+}
+
+th {
+    
+}
+
+td {
+    text-align: center;
+}

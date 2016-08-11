@@ -1,0 +1,81 @@
+/* CIA SILLY SITE parts 1 & 2*/
+
+head {
+    width: 75px;
+}
+body {
+    margin: 30px;
+    background: lightblue;
+    border: 10px double lightgreen;
+}
+
+.small-image {
+    width: 350px;
+    margin: 30px;
+}
+
+.image-float {
+    float: left;
+    margin: 35px 50px 25px 0;
+}
+
+h1 {
+    font-family: Georgia;
+    color: darkgreen;
+    text-align: center;
+}
+
+h2 {
+    font-family: Georgia;
+    text-align: center;
+}
+
+h3 {
+    font-family: Georgia;
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+}
+
+.bullets {
+    border-bottom: 3px solid darkblue;
+    list-style-type: georgian;
+    margin: 0px 0px 20px 0px ;
+    padding: 7px 300px 7px 300px ;
+    }
+
+}
+ul.left {
+}
+
+ul.right {
+    text-align: right ;
+}
+
+ul li {
+    display: inline ;
+    padding: 0px 3px 0px 3px ;
+}
+
+.side {
+    display: inline;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    margin: 50px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: hotpink;
+    margin: 75px;
+}
+
+.upper {
+    text-transform: uppercase;
+    margin: 0 0 0 50px;
+}

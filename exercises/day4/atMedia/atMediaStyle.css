@@ -1,0 +1,43 @@
+body {
+    
+}
+
+div{
+    
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    color: white;
+    background-color: bisque;
+}
+
+h1 {
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    color: white;
+    background-color: bisque;
+}
+
+p {
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    color: white;
+    background-color: bisque;
+}
+
+@media (max-width: 50vh) {
+    div {
+        border-color: pink !important;
+    }
+    
+    h1{
+        color: chartreuse;  
+    }
+    
+    p {
+        background-color: cadetblue;
+    }
+}
+    /*@media Links with Responsive Properties in html and CSS*/

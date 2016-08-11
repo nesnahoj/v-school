@@ -1,0 +1,1 @@
+EventListener is an exercise to use some event listeners through functions to alert that something has been done.  Such as mouse"clicked" or mouse"over"."  Another event is to output the user input after they have typed it in.

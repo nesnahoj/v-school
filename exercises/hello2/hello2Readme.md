@@ -1,0 +1,2 @@
+this is a second trial for the Hello exercise. This exercise used CSS styling, html, and super simple JS to produce "Hello!"
+It was an intro to linking the different file types from external sources instead of using inline styling, etc.
