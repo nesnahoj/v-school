@@ -1,39 +1,37 @@
 body{
     padding: 0px 0px 0px 0px !important;
-    margin: 0px 0px 0px 0px !important;
+    margin: 0px 0px 100px !important;
 }
 
-/*
-@font-face{
-	font-family:"Super Mario 256";
-	src:url("http://www.myfontfree.com/data/3/s/super_mario_256/SuperMario256.ttf");
+html {
+    position: relative;
+    min-height: 100%;
 }
-*/
 
 .container-fluid {
-    padding: 0px !important;
-    margin: 0px 0px 0px 0px !important;
-    border: 0px 0px 0px 0px !important;
+
 }
+
 .row1 {
     background-color: #ffda09;
-    height: 12vh;
-    width: 100%;
-    padding: 20px 1050px 0px 0px;
-    margin: 0px;
-    margin-top: -20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-family:"Super Mario 256";
 	src: url("http://www.myfontfree.com/data/3/s/super_mario_256/SuperMario256.ttf");
     font-size: 300px;
-    text-align: center;
-    padding-top: 30px;
+    text-align: left;
     color: #eb1f22;
+}
+
+h1 {
+    font-size: 96px
 }
  
 .row2 {
     background-color: #eb1f22;
-    height: 43vh;
-    padding: 30px 0 20px 0;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .center {
@@ -42,33 +40,69 @@ body{
 
 .luigi {
     padding: 15px 10px 0px 0px;
+    background-position: center;
 }
 
 .row3 {
     background-color: #ffffff;
-    height: 33vh;
-    padding: 30px 750px 30px 750px;
-    font-size: 300px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
     font-family:"Super Mario 256";
 	src: url("http://www.myfontfree.com/data/3/s/super_mario_256/SuperMario256.ttf");
     color: #eb1f22;
 }
 h2 {
-    font-size: 148px;
+    font-size: 80px;
 }
 
 h3 {
-   text-align: center; 
+    text-align: center;
+    font-family: 'Candal', sans-serif;
+    font-size: 48px;
 }
 
 .row4 {
     background-color: #ffda09;
-    height: 10vh;
-}
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    }
 
 .toad {
+    float: right;
     overflow: hidden;
     height: 75px;
-    width: 75px;
-    padding: 15px 10px 0px 0px;
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+}
+
+@media (max-width: 500px) {
+    
+    h1 {
+        font-size: .5em;
+        display: flex;
+    }
+    
+    .luigi {
+        display: flex;
+    }
+    
+    h2 {
+        font-size: .5em;
+        display: flex;
+    }
+    
+    h3 {
+        font-size: .5em;
+        display: flex;
+    }
+    
+    .toad {
+        display: flex;
+    }
+
 }

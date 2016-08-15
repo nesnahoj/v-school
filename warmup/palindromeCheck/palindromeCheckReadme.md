@@ -1,0 +1,1 @@
+Write a function using a for loop that will check whether a word or number is a palindrome. A true palindrome function will allow for spaces and capitals, this function does not.  To see what a palindrome is, Google it.

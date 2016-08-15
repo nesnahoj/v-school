@@ -26,6 +26,7 @@ var output1 = document.getElementById("output1");
 var htmlAddCalculator = function () {
     var num1 = document.getElementById("num1").value;
     var num2 = document.getElementById("num2").value;
+// use parseInt(string1) + parseInt(string2);
 output1.innerHTML = (+num1 + +num2);
 };
 numOut.addEventListener("click", htmlAddCalculator);
