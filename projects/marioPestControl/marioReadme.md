@@ -42,5 +42,7 @@ Deployment, Level 1
 Opening an HTML document in browser
 Extra Credit
 Build Mario Pest Control website to be responsive, meaning it looks great when shrunk down to the screen size of a smart phone.
-
+ 
 Bob Ziroll-->
+
+I learned a great deal of info about JS, HTML nad especially CSS.  Bootstrap was not used on this project.
