@@ -1,0 +1,4551 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fmodern\fcharset0 Courier;
+\f3\fswiss\fcharset0 Helvetica-Light;\f4\froman\fcharset0 Times-Roman;\f5\fnil\fcharset0 HelveticaNeue;
+\f6\fnil\fcharset0 LucidaGrande;\f7\fnil\fcharset0 Georgia;\f8\fnil\fcharset0 PTMono-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red185\green188\blue186;\red166\green178\blue85;
+\red242\green242\blue242;\red18\green18\blue20;\red217\green11\blue0;\red51\green51\blue51;\red254\green73\blue64;
+\red162\green127\blue173;\red237\green249\blue255;\red212\green128\blue77;\red27\green33\blue37;\red255\green39\blue18;
+\red25\green49\blue68;\red202\green203\blue205;\red0\green0\blue233;\red108\green108\blue108;\red179\green179\blue179;
+\red0\green0\blue117;\red82\green0\blue83;\red83\green85\blue2;\red16\green121\blue2;\red135\green135\blue135;
+\red152\green0\blue15;\red245\green245\blue245;\red20\green103\blue1;\red98\green0\blue1;\red66\green0\blue83;
+\red0\green0\blue135;\red0\green20\blue100;\red6\green54\blue26;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid2\'00;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww16400\viewh12100\viewkind0
+\deftab720
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs96 \cf0 use jshint.com for examining code\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+ROCK, PAPER, SCISSORS GAME\
+/*var userChoice = prompt("Do you choose rock, paper or scissors?");\
+var computerChoice = Math.random();\
+if (computerChoice < 0.34) \{\
+	computerChoice = "rock";\
+\} else if(computerChoice <= 0.67) \{\
+	computerChoice = "paper";\
+\} else \{\
+	computerChoice = "scissors";\
+\} console.log("Computer: " + computerChoice);*/\
+\
+// for change of choice1 to "paper"\
+//\
+\
+var compare = function(choice1 , choice2) \{\
+    if(choice1 === choice2) \{\
+        return "The result is a tie!";\
+    \}\
+    else if(choice1 === "paper") \{\
+        if(choice2 === "scissors") \{\
+            return "scissors wins";\
+        \}\
+        else if(choice1 === "paper") \{\
+            if(choice2 === "rock") \{\
+                return "paper wins";\
+            \}\
+        \}\
+    \}\
+    else if(choice1 === "paper") \{\
+        if(choice2 === "rock") \{\
+            return "paper wins";\
+        \}\
+    \}\
+    else if(choice1 === "paper") \{\
+        if(choice2 === "scissors") \{\
+            return "scissors wins";\
+        \}\
+    \}\
+    // for change of choice1 to "scissors"\
+    //\
+    \
+    else if(choice1 === "scissors") \{\
+        if(choice2 === "rock") \{\
+            return "rock wins";\
+        \}\
+        else if(choice1 === "scissors") \{\
+            if(choice2 === "scissors") \{\
+                return "The result is a tie!";\
+            \}\
+        \}\
+        else if(choice1 === "scissors") \{\
+            if(choice2 === "paper") \{\
+                return "scissors wins";\
+            \}\
+        \}\
+    \}\
+\};\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+/*jshint multistr:true */    This code below searches for my name in the string of text.  if it finds it it console.logs the number of hits.  if it does not find it it console.logs \'93Your name wasn\'92t found!\'94  It will allow a 
+\fs30 \cf2 \expnd0\expndtw0\kerning0
+Now, as we mentioned, this system isn't perfect. For instance, if the paragraph contains both 
+\f1\fs26 \cb0 "Eric"
+\f0\fs30 \cb1  and 
+\f1\fs26 \cb0 "Eddie"
+\f0\fs30 \cb1 , we'll see this in our 
+\f1\fs26 \cb0 hits
+\f0\fs30 \cb1  array:\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs26 \cf3 \cb0 [\cf4 'E'\cf3 ,\cf4 'r'\cf3 ,\cf4 'i'\cf3 ,\cf4 'c'\cf3 ,\cf4 'E'\cf3 ,\cf4 'd'\cf3 ,\cf4 'd'\cf3 ,\cf4 'i'\cf3 ,\cf4 'e'\cf3 ];\
+\pard\pardeftab720\sl440\sa360\partightenfactor0
+
+\f0\fs30 \cf2 \cb1 Think about how you might fine-tune this program to make sure it 
+\i only
+\i0  finds exact matches for your name. Search the Internet to see if there are any built-in JavaScript string methods that can help!
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var text = "ha la ha la hala Jeremy ha la ha la ha la hala ha la ha\\\
+ha la hala ha la ha la hala ha la ha la halaha la ha la hala\\ \\\
+la ha la halaha la ha la hala ha la ha la hala ha la ha la halaha la";\
+\
+var myName = "Jeremy";\
+var hits = [];\
+\
+// look for Jeremy in the text\
+for(var i=0; i < text.length; i++) \{\
+    if (text[i] === "J") \{\
+        for(var J = i; J < (myName.length + i); J++) \{\
+			hits.push(text[J]);\
+		\}\
+	\}\
+\}\
+\
+if (hits.length === 0) \{\
+	console.log("Your name wasn't found!");\
+\} else \{\
+	console.log(hits);\
+\}\
+\
+// I inserted Jeremiah later in the string and this is the result I got back\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+[ 'J', 'e', 'r', 'e', 'm', 'y', 'J', 'e', 'r', 'e', 'm', 'i' ]\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 //NOTICE THE \'91I\'92 PORTION OF Jeremiah was included.\
+//When I insert an \'93s\'94 at the end of my name AND insert it in the string to search for like this:\
+\
+var text = "ha la ha la hala Jeremys ha la ha la ha la hala ha la ha\\\
+ha la hala ha la ha la hala Jeremiah ha la ha la halaha la ha la hala\\ \\\
+la ha la halaha la ha la hala ha la ha la hala ha la ha la halaha la";\
+\
+//the result is this:\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+[ 'J', 'e', 'r', 'e', 'm', 'y', 's', 'J', 'e', 'r', 'e', 'm', 'i', 'a' ]\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+//COIN TOSS SEARCHING FOR TAILS\
+var coinFace = Math.floor(Math.random() * 2);\
+\
+while(coinFace === 0)\{\
+	console.log("Heads! Flipping again...");\
+	var coinFace = Math.floor(Math.random() * 2);\
+\}\
+console.log("Tails! Done flipping.");\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+// Help me comprehend why it is so simple?\
+var understand = true;\
+\
+while(\cf7 understand\cf0 )\{\
+	console.log("I'm learning while loops!");\
+	understand = false;\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+WHEN TO WHILE AND WHEN TO FOR\
+var glen=true\
+while(glen ==1)\{\
+    console.log("Here is my While statement!");\
+  glen = false  \
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\
+var glen=true\
+while(glen ==1)\{\
+    console.log("Here is my While statement!");\
+  glen = false  \
+\}\
+\
+\
+var glenda=1\
+\
+for(var i = 1; i != 11; i++) \{\
+    console.log(i);\
+\};\
+\
+HERE IS MY RESULT!\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+Here is my While statement!\
+1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10
+\fs30 \cf3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+/*\
+var loopCondition = false;\
+\
+do \{\
+	console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");	\
+\} while (loopCondition);\
+*/\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+SLAYING THE DRAGON\
+var slaying = true\
+var youHit = Math.floor(Math.random() * 2)\
+var damageThisRound = Math.floor(Math.random()*5 + 1)\
+var totalDamage = 0\
+\
+while(slaying) \{\
+    if (youHit) \{\
+        console.log("You hit the dragon!");\
+        totalDamage += damageThisRound;\
+        if (totalDamage >= 4) \{\
+        console.log("You slew the Dragon!");\
+        slaying = false;\
+    \}  else \{\
+        youHit = Math.floor(Math.random() * 2);\
+    \}\
+  \}  else  \{\
+      console.log("You lose!");\
+      slaying = false;\
+  \}\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+If / else if / else
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var isEven = function(number) \{\
+  // Your code goes here!\
+  if (number % 2 === 0) \{\
+  return true; \
+\} else if (isNaN(number)) \{\
+    return ("Please insert a number!");\
+\} else \{\
+        return false;\
+\}\
+\};\
+\
+\
+isEven("w");\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+For or while\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b0\fs24 \cf8 // Write your loop below!\
+for(var i=1; i < 11; i++) \{\
+    console.log(i);\
+\}\
+\
+var condition = true;\
+while(condition) \{\
+    console.log("Hello!");\
+    condition = false;\
+\}
+\b\fs50 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Sneak Preview: the switch statement
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var lunch = prompt("What do you want for lunch?","Type your lunch choice here");\
+\
+switch(lunch)\{\
+  case 'sandwich':\
+    console.log("Sure thing! One sandwich, coming up.");\
+    break;\
+  case 'soup':\
+    console.log("Got it! Tomato's my favorite.");\
+    break;\
+  case 'salad':\
+    console.log("Sounds good! How about a caesar salad?");\
+    break;\
+  case 'pie':\
+    console.log("Pie's not a meal!");\
+    break;\
+  defult:\
+    console.log("Huh! I'm not sure what " + lunch + " is. How does a sandwich sound?");\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Adding to an existing switch
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var color = prompt("What's your favorite primary color?","Type your favorite color here");\
+\
+switch(color) \{\
+  case 'red':\
+    console.log("Red's a good color!");\
+    break;\
+  case 'blue':\
+    console.log("That's my favorite color, too!");\
+    break;\
+  //Add your case here!\
+  \
+  default:\
+    console.log("I don't think that's a primary color!");\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Adding to an existing switch
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var color = prompt("What's your favorite primary color?","Type your favorite color here");\
+\
+switch(color) \{\
+  case 'red':\
+    console.log("Red's a good color!");\
+    break;\
+  case 'blue':\
+    console.log("That's my favorite color, too!");\
+    break;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf9   //Add your case here!\cf0 \
+  case 'yellow':\
+      console.log("Yellow is pretty, but it isn't my favorite.");\
+      break;\
+  default:\
+    console.log("I don't think that's a primary color!");\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Practice with switch
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var candy = prompt("What's your favorite candy?","Type your favorite candy here.");\
+\
+switch(candy) \{\
+  case 'licorice':\
+    console.log("Gross!");\
+    break;\
+  case 'gum':\
+    console.log("I like gum!");\
+    break;\
+  case 'beets':\
+    console.log("...is that even a candy?");\
+    break;\
+  case 'salt water taffy':\
+    console.log("That's Great stuff!");\
+    break;\
+  case 'Sugar Daddies':\
+    console.log("Those are: good, but they get too sticky for me.");\
+    break;\
+  case 'Mints':\
+    console.log("I suppose those are like candy?");\
+    break;\
+  default:\
+  console.log("What about your favorite fruit?");\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Practice with switch
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var answer = prompt("What is your wife's name?");\
+\
+switch(name) \{\
+  case 'Virginia':\
+    console.log("That's a pretty name!");\
+    break;\
+  case 'Alexandra':\
+    console.log("That's a pretty name! One of my daughters has that name.");\
+    break;\
+  case 'Savannah':\
+    console.log("That's amazing too! Ironically I have another daughter named that!");\
+    break;\
+  case 'Vanessa':\
+    console.log("Man that is too much of a coincidence. Yet, another ofmy girls!");\
+    break;\
+  case 'Miranda':\
+    console.log("Okay, are you psychic? My fourth daughter has that name!");\
+    break;\
+  case 'Victoria':\
+    console.log("My youngest daughter is named that!");\
+    break;\
+  default:\
+  console.log("My wife's name is Gina!");\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Overview
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf2 \expnd0\expndtw0\kerning0
+So far we've seen how to control our programs given a single condition: whether one variable is equal to a certain value, for instance. But what if we want to check more than one variable?\
+For this, we'll need logical operators. JavaScript has three: and (\cb0 &&\cb1 ), or (\cb0 ||\cb1 ), and not (\cb0 !\cb1 ).\
+Using these, we can check several variables at once! Check out the code in the editor.
+\fs30 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+var iLoveJavaScript = ;\
+var iLoveLearning = ;\
+\
+if(iLoveJavaScript && iLoveLearning) \{\
+  // if iLoveJavaScript AND iLoveLearning:\
+  console.log("Awesome! Let's keep learning!");\
+\} else if(!(iLoveJavaScript || iLoveLearning)) \{\
+  // if NOT iLoveJavaScript OR iLoveLearning:\
+  console.log("Let's see if we can change your mind.");\
+\} else \{\
+  console.log("You only like one but not the other? We'll work on it.");\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+AND
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 // Declare your variables here!\
+var hungry = true\
+var foodHere = true\
+\
+var eat = function() \{\
+\
+  // Add your if/else statement here!\
+  if(hungry && foodHere) \{\
+    return true;\
+    \} else \{\
+        return false;\
+    \}\
+\};\
+eat(hungry && foodHere)  ==> returned true\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+OR\
+\pard\pardeftab720\partightenfactor0
+
+\b0\fs30 \cf2 The logical operator 
+\b or
+\b0  is written in JavaScript like this: 
+\f1\fs26 \cb0 ||
+\f0\fs30 \cb1 . It evaluates to 
+\f1\fs26 \cb0 true
+\f0\fs30 \cb1  when 
+\i one or the other or both
+\i0  expressions are 
+\f1\fs26 \cb0 true
+\f0\fs30 \cb1 ; if they're not, it evaluates to 
+\f1\fs26 \cb0 false
+\f0\fs30 \cb1 .\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs26 \cf10 \cb0 true\cf3  || \cf10 true\cf3 ;     \cf4 //\cf3  => \cf10 true\cf3 \
+\cf10 true\cf3  || \cf10 false\cf3 ;    \cf4 //\cf3  => \cf10 true\cf3 \
+\cf10 false\cf3  || \cf10 true\cf3 ;    \cf4 //\cf3  => \cf10 true\cf3 \
+\cf10 false\cf3  || \cf10 false\cf3 ;   \cf4 //\cf3  => \cf10 false\cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf2 \cb1 The 
+\b or
+\b0  operator is written with two vertical bars 
+\f1\fs26 \cb0 ||
+\f0\fs30 \cb1 . The vertical bar character is located right above the Enter key on your keyboard.
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.codecademy.com/en/courses/javascript-beginner-en-qDwp0/2/3?curriculum_id=506324b3a7dffd00020bf661"}}{\fldrslt \cf0 https://www.codecademy.com/en/courses/javascript-beginner-en-qDwp0/2/3?curriculum_id=506324b3a7dffd00020bf661}}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+My First Game
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 // Check if the user is ready to play!\
+confirm("I understand, click 'OK', if you are ready to start!");\
+\
+var age = prompt("What is your age?"); \
+    if(age<13) \{\
+        console.log("Go ask your Mom if you can play...");\
+  \} else \{\
+        if (age>=13) \{\
+        console.log("Let's begin!");\
+    \}\
+\}\
+\
+console.log("Suddenly, Bieber stops and says, 'Who wants to race me?'");\
+var userAnswer = prompt("Do you want to race Bieber on stage?" , "Answer 'yes' or 'no'");\
+    if(userAnswer.toLowerCase() === "yes") \{\
+    console.log("You and Bieber start racing. It's neck and neck! You win by a shoelace!");\
+    \} else \{\
+        if (userAnswer.toLowerCase() === "no") \{\
+            console.log("Oh no! Bieber shakes his head and sings 'I set a pace, so I can race without pacing.'");\
+        \}\
+    \}\
+ \
+var feedback = prompt("Will you rate this game out of 10?" , "Please insert your rating here.");\
+    if(feedback >= 8) \{\
+    console.log("Thank you! We should race at the next concert.");\
+    \} else \{\
+        console.log("I'll keep practicing coding and racing.");\
+    \}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+The Troll Game
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 var troll = prompt("You're walking through the forest, minding your own business, and you run into a troll! Do you FIGHT him, PAY him, or RUN?").toUpperCase();\
+\
+switch(troll) \{\
+  case 'FIGHT':\
+    var strong = prompt("How courageous! Are you strong (YES or NO)?").toUpperCase();\
+    var smart = prompt("Are you smart?").toUpperCase();\
+    if(strong === 'YES' || smart === 'YES') \{\
+      console.log("You only need one of the two! You beat the troll--nice work!");\
+    \} else \{\
+      console.log("You're not strong OR smart? Well, if you were smarter, you probably wouldn't have tried to fight a troll. You lose!");\
+    \}\
+    break;\
+  case 'PAY':\
+    var money = prompt("All right, we'll pay the troll. Do you have any money (YES or NO)?").toUpperCase();\
+    var dollars = prompt("Is your money in Troll Dollars?").toUpperCase();\
+    if(money === 'YES' && dollars === 'YES') \{\
+      console.log("Great! You pay the troll and continue on your merry way.");\
+    \} else \{\
+      console.log("Dang! This troll only takes Troll Dollars. You get whomped!");\
+    \}\
+    break;\
+  case 'RUN':\
+    var fast = prompt("Let's book it! Are you fast (YES or NO)?").toUpperCase();\
+    var headStart = prompt("Did you get a head start?").toUpperCase();\
+    if(fast === 'YES' || headStart === 'YES') \{\
+      console.log("You got away--barely! You live to stroll through the forest another day.");\
+    \} else \{\
+      console.log("You're not fast and you didn't get a head start? You never had a chance! The troll eats you.");\
+    \}\
+    break;\
+  default:\
+    console.log("I didn't understand your choice. Hit Run and try again, this time picking FIGHT, PAY, or RUN!");\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+My Game
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var user = prompt("What's your name?").toUpperCase();\
+\
+var doYouMarryHer = prompt("You're walking down the street minding your own business jamming to your tunes when 'BAM!' this beautiful girl bumps into you dropping her arm full of papers, books and purse.  She says in a squeeky voice as you take out your ear buds, 'Oops, I'm sorry! ... OOOH! What's your name?' Do you APOLOGIZE and help her pick up her things, apologize and HELP pick up her stuff and strike up a conversation, or WALK away?").toUpperCase();\
+\
+switch(doYouMarryHer)\{\
+    case 'APOLOGIZE':\
+        var sincere = prompt("That's thoughtful! Are you sincere (YES or NO)?").toUpperCase();\
+        var empathetic = prompt("That was nice. Are you empathetic (YES or NO)?").toUpperCase();\
+        if(sincere === 'YES' || empathetic === 'YES') \{\
+            console.log("Those are both good things, but you only need one in this case. You snatched a small piece of her heart!");\
+        \} else \{ \
+            console.log("Come on? You're not sincere or empathetic? Sorry! You won't get a piece of her heart. You Lose!");\
+        \}\
+       break;\
+    case 'HELP':\
+        var help = prompt("That's sweet! Are you trying to help her (YES or NO)?").toUpperCase();\
+        var name = prompt("That's nice! Are you trying to get her name and number (YES or NO)?").toUpperCase();\
+        if(help === 'YES' || name === 'YES') \{\
+            console.log("Only the most sincere and earnest efforts may get her name and number! You only needed one of those, you just earned a piece of her heart!");\
+        \} else \{\
+            console.log("Really! Iguess you are not on track to getting a date with her! You lose!");\
+        \}\
+        break;\
+    case 'WALK':\
+        var ohwell = prompt("You know how to influence others! Do you care (YES or NO)?").toUpperCase();\
+        var walk = prompt("You don't know or care about others! Do you care (YES or NO)?").toUpperCase();\
+        if(ohwell === 'YES' || walk === 'YES') \{\
+            console.log("Only the most sincere and earnest efforts may get her name and number! You only needed one of those, you just earned a piece of her heart!");\
+        console.log("3 strikes you're out! YOU ARE THE LOSER! She was definitely interested in you hence the OOOH! comment and she had been casing how to get you to notice her for half a block. Oh, and she is loaded!!!");\
+\}\
+    console.log("Nice game!");\
+    break;\
+    default:\
+        console.log("I just don't understand you man! There were so many signs!");\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+NESTING AN IF STATEMENT IN A CASE \'91XXX\'92
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl440\sa360\partightenfactor0
+
+\fs30 \cf2 \cb11 \expnd0\expndtw0\kerning0
+Here's how you can nest an 
+\f1\fs26 \cb0 if
+\f0\fs30 \cb11  / 
+\f1\fs26 \cb0 else
+\f0\fs30 \cb11 statement inside a 
+\f1\fs26 \cb0 case
+\f0\fs30 \cb11 :\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs26 \cf10 \cb0 switch\cf3 (month) \{\
+\
+    \cf10 case\cf3  \cf12 0\cf3 :\
+\
+        \cf10 if\cf3 (day == \cf12 1\cf3 ) \{\
+            console.log(\cf4 "Happy New Year"\cf3 );\
+        \}\
+        \cf10 else\cf3  \{\
+            console.log(\cf4 "Happy January"\cf3 );\
+        \}\
+\
+        \cf10 break\cf3 ;
+\f2\fs30 \cb13 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+My Game with && and ||
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var user = prompt("What's your name?").toUpperCase();\
+\
+var doYouMarryHer = prompt("You're walking down the street minding your own business jamming to your tunes when 'BAM!' this beautiful girl bumps into you dropping her arm full of papers, books and purse.  She says in a squeeky voice as you take out your ear buds, 'Oops, I'm sorry! ... OOOH! What's your name?' Do you APOLOGIZE and help her pick up her things, apologize and HELP pick up her stuff and strike up a conversation, or WALK away?").toUpperCase();\
+\
+switch(doYouMarryHer)\{\
+    case 'APOLOGIZE':\
+        var sincere = prompt("That's thoughtful! Are you sincere (YES or NO)?").toUpperCase();\
+        var empathetic = prompt("That was nice. Are you empathetic (YES or NO)?").toUpperCase();\
+        if(sincere === 'YES' || empathetic === 'YES') \{\
+            console.log("Those are both good things, but you only need one in this case. You snatched a small piece of her heart!");\
+        \} else \{ \
+            console.log("Come on? You're not sincere or empathetic? Sorry! You won't get a piece of her heart. You Lose!");\
+        \}\
+       break;\
+    case 'HELP':\
+        var help = prompt("That's sweet! Are you trying to help her (YES or NO)?").toUpperCase();\
+        var name = prompt("That's nice! Are you trying to get her name and number (YES or NO)?").toUpperCase();\
+        if(help === 'YES' && name === 'YES') \{\
+            console.log("Only the most sincere and earnest efforts may get her name and number! You only needed one of those, you just earned a piece of her heart!");\
+        \} else \{\
+            console.log("Really! Iguess you are not on track to getting a date with her! You lose!");\
+        \}\
+        break;\
+    case 'WALK':\
+        var ohwell = prompt("You know how to influence others! Do you care (YES or NO)?").toUpperCase();\
+        var walk = prompt("You don't know or care about others! Do you care (YES or NO)?").toUpperCase();\
+        if(ohwell === 'YES' || walk === 'YES') \{\
+            console.log("Only the most sincere and earnest efforts may get her name and number! You only needed one of those, you just earned a piece of her heart!");\
+        console.log("3 strikes you're out! YOU ARE THE LOSER! She was definitely interested in you hence the OOOH! comment and she had been casing how to get you to notice her for half a block. Oh, and she is loaded!!!");\
+\}\
+    console.log("Nice game!");\
+    break;\
+    default:\
+        console.log("I just don't understand you man! There were so many signs!");\
+\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Array Properties
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];\
+console.log(languages[2]);\
+console.log(languages.length);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Iterating over an Array
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];\
+for (var i=0; i< languages.length; i++) \{\
+console.log(languages[i])\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Nouns(things) & Verbs(actions) together as objects
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\fs30 \cf2 \expnd0\expndtw0\kerning0
+Using 
+\b object
+\b0 s, we can put our information and the functions that use that information 
+\i in the same place
+\i0 .\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 var phonebookEntry = \{\};\
+\
+phonebookEntry.name = 'Oxnard Montalvo';\
+phonebookEntry.number = '(555) 555-5555';\
+phonebookEntry.phone = function() \{\
+  console.log('Calling ' + this.name + ' at ' + this.number + '...');\
+\};\
+\
+phonebookEntry.phone(); \
+logs  - 
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+Calling Oxnard Montalvo at (555) 555-5555...
+\fs30 \cf3 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Object syntax
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var me = \{\
+    name: "Jeremy" ,\
+    age: 46    \
+\};\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Creating Objects
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var me = new Object();\
+me.name = "Jeremy",\
+me["age"] = 46,\
+    console.log(me);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Creating Objects methods
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var object1 = \{\
+    "name": "Jeremy"\
+\};\
+    \
+var object2 = new Object()\
+    object2.age = "46";\
+    \
+var object3 = new Object()\
+    object3["hair"] = "brown";\
+    \
+console.log(object1)   -   \{ name: \'91Jeremy\'92 )\
+console.log(object2.age)   -   46\
+console.log(object3.hair)   -   brown\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Heterogeneous Arrays with Objects
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var myArray = [1, false, "Jer", \{age: 46\}];\
+\
+var someObject = \{age: 20\}\
+\
+var someArray = [someObject];\
+console.log(someArray);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Multidimensional Arrays with Objects
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var newArray = [[2, 4, \{age: 46\}] , [22, 24, 26, 28]]\
+console.log(newArray);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Editing existing Objects
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var myObject = \{\
+  name: 'Eduardo',\
+  type: 'Most excellent',\
+  // Add your code here!\
+  interests: ["Foosball", "Geology", "7's"]\
+\};\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Creating your own objects
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var myOwnObject = \{name: "Jer", age: 46, alive: true, wife: "Gina"\};\
+console.log(myOwnObject);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+lists and searching them example
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var friends = \{\};\
+friends.bill = \{\
+  firstName: "Bill",\
+  lastName: "Gates",\
+  number: "(206) 555-5555",\
+  address: ['One Microsoft Way','Redmond','WA','98052']\
+\};\
+friends.steve = \{\
+  firstName: "Steve",\
+  lastName: "Jobs",\
+  number: "(408) 555-5555",\
+  address: ['1 Infinite Loop','Cupertino','CA','95014']\
+\};\
+\
+var list = function(obj) \{\
+  for(var prop in obj) \{\
+    console.log(prop);\
+  \}\
+\};\
+\
+var search = function(name) \{\
+  for(var prop in friends) \{\
+    if(friends[prop].firstName === name) \{\
+      console.log(friends[prop]);\
+      return friends[prop];\
+    \}\
+  \}\
+\};\
+\
+list(friends);\
+search("Steve");\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+List \'91em All
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var friends = \{\
+bill: \{\
+    firstName: "Bill",\
+    lastName: "Gates",\
+    number: "555-555-5555",\
+    address: ['one', 'Bogus', 'City', 'State', 'Zip']\
+\},\
+steve: \{\
+    firstName: "Steve",\
+    lastName: "Jobs",\
+    number: "222-222-2222",\
+    address: ['one', 'Bogus', 'City', 'State', 'Zip']\
+\},\
+gina: \{\
+    firstName: "Gina",\
+    lastName: "Johansen",\
+    number: "333-333-3333",\
+    address: ['one', 'Bogus', 'City', 'State', 'Zip']\
+\},\
+\}\
+\
+var list = function(values) \{\
+    for (var key in values) \{\
+        console.log(key)\
+        console.log(friends[key])\
+    \} \
+\};\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Fizz Buzz
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 \
+// Test to see if a number from the array is NOT a true\
+// multiple of three. Real multiples will return false.\
+//var answer = multiplesOfEight[5] % 3 !== 0;\
+\
+var fizzBuzz = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]\
+\
+for(var x=0; x<fizzBuzz.length; x++) \{\
+    if(fizzBuzz[x] % 3 == 0 && fizzBuzz[x] % 5 !== 0) \{\
+        console.log("Fizz");\
+    \} else if(fizzBuzz[x] % 5 == 0 && fizzBuzz[x] % 3 !== 0) \{\
+        console.log("Buzz");\
+    \} else if(fizzBuzz[x] % 3 == 0 && fizzBuzz[x] % 5 == 0) \{\
+        console.log("FizzBuzz");\
+    \} else \{\
+        console.log(fizzBuzz[x]);\
+    \}\
+\
+\};\
+\
+\
+/*fizz = 3\
+buzz = 5\
+fizz = 6\
+fizz = 9\
+buzz = 10\
+fizz = 12\
+fizzbuzz = 15\
+fizz = 18\
+buzz = 20\
+*/\
+\
+RESULTS :\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+1\
+2\
+Fizz\
+4\
+Buzz\
+Fizz\
+7\
+8\
+Fizz\
+Buzz\
+11\
+Fizz\
+13\
+14\
+FizzBuzz\
+16\
+17\
+Fizz\
+19\
+Buzz
+\fs30 \cf3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Function review
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // Accepts a number x as input and returns its square\
+//var square = function (x) \{\
+//  return x * x;\
+//\};\
+\
+// Write the function multiply below\
+// It should take two parameters and return the product\
+var multiply = function(x, y) \{\
+    return x * y;\
+\};\
+multiply (4, 5);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Why are Methods important?
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var bob = new Object();\
+bob.age = 17;\
+// this time we have added a method, setAge\
+bob.setAge = function (newAge)\{\
+  bob.age = newAge;\
+\};\
+\
+bob.getYearOfBirth = function () \{\
+  return 2014 - bob.age;\
+\};\
+console.log(bob.getYearOfBirth());\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+The \'93this\'94 keyword
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // here we define our method using "this", before we even introduce bob\
+var setAge = function (newAge) \{\
+  this.age = newAge;\
+\};\
+// now we make bob\
+var bob = new Object();\
+bob.age = 30;\
+// and down here we just use the method we already made\
+bob.setAge = setAge;\
+  \
+// change bob's age to 50 here\
+bob.setAge(50);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Make your own method
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var rectangle = new Object();\
+rectangle.height = 3;\
+rectangle.width = 4;\
+// here is our method to set the height\
+rectangle.setHeight = function (newHeight) \{\
+  this.height = newHeight;\
+\};\
+// help by finishing this method\
+rectangle.setWidth = function (newWidth) \{\
+    this.width = newWidth;\
+\};\
+\
+// here change the width to 8 and height to 6 using our new methods\
+rectangle.setHeight(6);\
+rectangle.setWidth(8);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+More kinds of Methods
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var square = new Object();\
+square.sideLength = 1;\
+square.calcPerimeter = function() \{\
+  return this.sideLength * 4;\
+\};\
+// help us define an area method here\
+\
+square.calcArea = function() \{\
+  return this.sideLength * this.sideLength;\
+\};\
+\
+var p = square.calcPerimeter();\
+var a = square.calcArea();\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Trying Functions
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Cat(age, color) \{\
+  this.age = age;\
+  this.color = color;\
+\}\
+\
+// make a Dog constructor here\
+function Dog(age, name, breed) \{\
+    this.age = age;\
+    this.name = name;\
+    this.breed = breed;\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+More Options
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(name,age) \{\
+  this.name = name;\
+  this.age = age;\
+  this.species = "Homo Sapiens";\
+\}\
+\
+var sally = new Person("Sally Bowles",39);\
+var holden = new Person("Holden Caulfield",16);\
+\
+\
+console.log("sally's species is " + sally.species + " and she is " + sally.age);\
+console.log("holden's species is " + holden.species + " and he is " + holden.age);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Constructors with Methods
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Rectangle(height, width) \{\
+  this.height = height;\
+  this.width = width;\
+  this.calcArea = function() \{\
+      return this.height * this.width;\
+  \};\
+  // put our perimeter function here!\
+  this.calcPerimeter = function() \{\
+      return (height * 2) + (width * 2);\
+  \}\
+\}\
+\
+var rex = new Rectangle(7,3);\
+var area = rex.calcArea();\
+var perimeter = rex.calcPerimeter();\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Constructors in Review
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Rabbit(adjective) \{\
+    this.adjective = adjective;\
+    this.describeMyself = function() \{\
+        console.log("I am a " + this.adjective + " rabbit!");\
+    \};\
+\}\
+\
+// now we can easily make all of our rabbits\
+\
+var rabbit1 = new Rabbit("fluffy");\
+var rabbit2 = new Rabbit("happy");\
+var rabbit3 = new Rabbit("sleepy");\
+\
+\
+rabbit1.describeMyself();\
+rabbit2.describeMyself();\
+rabbit3.describeMyself();\
+result is 
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+I am a fluffy rabbit!\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf5 I am a happy rabbit!\
+I am a sleepy rabbit!
+\fs30 \cf3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Passing Objects into functions
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v// Our person constructor\
+function Person (name, age) \{\
+    this.name = name;\
+    this.age = age;\
+\}\
+\
+// We can make a function which takes persons as arguments\
+// This one computes the difference in ages between two people\
+var ageDifference = function(person1, person2) \{\
+    return person1.age - person2.age;\
+\};\
+\
+// Make a new function, olderAge, to return the age of\
+// the older of two people\
+var olderAge = function(person1, person2) \{\
+    if (person1.age >= person2.age) \{\
+        return (person1.age);\
+    \} else if (person1.age <= person2.age) \{\
+        return (person2.age);\
+    \}\
+\};\
+\
+\
+\
+// Let's bring back alice and billy to test our new function\
+var alice = new Person("Alice", 30);\
+var billy = new Person("Billy", 25);\
+\
+console.log("The older person is " + olderAge(alice, billy));\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+OBJECT CREATION 
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // Object Literal Syntax or Notation\
+var spencer = \{\
+  age: 22,\
+  country: "United States"\
+\};\
+\
+\
+// make spencer2 here with constructor notation\
+//Constructor Function\
+var Person = function(name, age, country) \{\
+    this.name =name;\
+    this.age = age;\
+    this.country = country;\
+\};\
+var batman = new Person("Batman", 75, "USA");\
+\
+\
+// new Object syntax Notation\
+var spencer2 = new Object();\
+spencer2.age = 22;\
+spencer2.country = "United States";\
+\
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+More with OBJECT CREATION\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\b0\fs24 \cf8 var object = \{\
+  name: "someName",\
+  age: 0,\
+\}\
+\
+console.log(object);\
+console.log(object["age"]);\
+console.log(object.name);\
+\
+object.age = 64;\
+object["name"] = "empty"; \
+console.log(object.age, object.name);\
+\
+object.changeName = function(name) \{\
+  /*15*/this.name = name;\
+\};\
+console.log(object.changeName);\
+\
+object.changeName("Joe Name");\
+console.log(object);\
+\
+\
+// line 23///////////////////////////////////////////////\
+\
+\
+var Animal = function(color, legs, quadrapedal, livesIn) \{\
+  this.color = color;\
+  this.legs = legs;\
+  this.quadrapedal = quadrapedal;\
+/*30*/  this.livesIn = livesIn;\
+\};\
+\
+Animal.prototype.changeProp = function(livesIn) \{\
+  this.livesIn = livesIn;\
+\};\
+\
+var polarBear = new Animal("white", 4, true, "arctic");\
+\
+console.log(polarBear);\
+console.log(polarBear["color"]);\
+console.log(polarBear.quadrapedal);\
+\
+polarBear.changeProp("Arctic North");\
+console.log(polarBear);\
+/*45*/\
+\
+\
+polarBear.oldMethod = "oldMethod";\
+console.log(polarBear.oldMethod);\
+console.log(polarBear);\
+\
+// ///////////////////////////////////////////////\
+\
+\
+var computer = new Object();\
+computer.type = "mac";\
+computer.size = 13;\
+computer.weight = "5 lbs";\
+computer.useful = true;\
+\
+console.log(computer);\
+console.log(computer["weight"]);\
+console.log(computer.type);\
+\
+computer.method = "computers do amazing things";\
+console.log(computer.method);\
+console.log(computer);
+\fs20 \cf8 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+EVEN / ODD LOOPING
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 for (var x = 0; x < 101; x++) \{ \
+    if(x % 2 === 0) \{\
+        console.log("Even");\
+    \} else \{\
+        console.log("Odd");\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Movie reviews with Switch statement 
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 ar getReview = function (movie) \{\
+\
+switch(movie)\{\
+    case 'Toy Story 2':\
+        return("Great story. Mean prospector.");\
+        break;\
+    case 'Finding Nemo':\
+        return("Cool animation, and funny turtles.");\
+        break;\
+    case 'The Lion King':\
+        return("Great songs.");\
+        break;\
+    default:\
+        return("I don't know.");\
+    \}\
+\};\
+getReview("Toy Story 2");\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Properties of Objects
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var snoopy = new Object();\
+snoopy.species = "beagle";\
+snoopy.age = 10;\
+\
+// save Snoopy's age and species into variables\
+// use dot notation for snoopy's species\
+var species = snoopy.species = "beagle";\
+    \
+// use bracket notation for snoopy's age\
+var age = snoopy['age'];\
+\
+console.log(snoopy.species, snoopy.age)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Customizing Constructors
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // Object Literal Syntax\
+var Book = \{\
+    title: \'93The Hobbit\'94;\
+    pages: 320;\
+    author: \'93J.R.R. Tolkien\'94;\
+\}\
+\
+// Constructor function syntax\
+var Book = function(title, pages, author) \{\
+    this.title = \'93The Hobbit\'94;\
+    this.pages = 320;\
+    this.author = \'93J.R.R. Tolkien\'94;\
+\}\
+\
+var hobbit = new Book(\'93The Hobbit\'94, 320, \'93J.R.R. Tolkien\'94);\
+var potter = new Book(\'93Harry Potter\'94, 350, \'93J.K. Rowling\'94);\
+\
+// New Object Syntax\
+var book = new Object();		or 	var book = \{\
+book.title = \'93The Hobbit\'94;				book.title = \'93The Hobbit\'94,\
+book.pages = 320;					book.pages = pages,\
+book.author = \'93J.R.R. Tolkien\'94;			book.author = \'93J.R.R. Tolkien\'94;\
+						\};\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Methods are like functions that are associated with a particular object.
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Circle (radius) \{\
+    this.radius = radius;\
+    this.area = function () \{\
+        return Math.PI * this.radius * this.radius;\
+       \
+    \};\
+    // define a perimeter method here\
+    this.perimeter = function () \{\
+        return 2* Math.PI * this.radius;\
+    \}\
+\};\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Digitizing People
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var bob = \{\
+    firstName: "Bob",\
+    lastName: "Jones",\
+    phoneNumber: "(650) 777-777",\
+    email: "bob.jones@example.com"\
+\};\
+\
+console.log(bob.firstName);\
+console.log(bob.lastName);\
+console.log(bob.email);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Accessing data in an array with console.log
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var bob = \{\
+    firstName: "Bob",\
+    lastName: "Jones",\
+    phoneNumber: "(650) 777-7777",\
+    email: "bob.jones@example.com"\
+\};\
+\
+var mary = \{\
+    firstName: "Mary",\
+    lastName: "Johnson",\
+    phoneNumber: "(650) 888-8888",\
+    email: "mary.jophnson@example.com"\
+    \
+\};\
+var contacts = [bob, mary];\
+\
+console.log(contacts[1].phoneNumber)\
+prints 
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+(650) 888-8888
+\fs30 \cf3 \
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Displaying People
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var bob = \{\
+    firstName: "Bob",\
+    lastName: "Jones",\
+    phoneNumber: "(650) 777-7777",\
+    email: "bob.jones@example.com"\
+\};\
+\
+var mary = \{\
+    firstName: "Mary",\
+    lastName: "Johnson",\
+    phoneNumber: "(650) 888-8888",\
+    email: "mary.johnson@example.com"\
+\};\
+\
+var contacts = [bob, mary];\
+\
+// printPerson added here\
+var printPerson = function(person) \{\
+ \
+console.log(person.firstName, person.lastName);   \
+\};\
+printPerson(contacts[0]);\
+printPerson(contacts[1]);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Listing Everybody
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var bob = \{\
+    firstName: "Bob",\
+    lastName: "Jones",\
+    phoneNumber: "(650) 777-7777",\
+    email: "bob.jones@example.com"\
+\};\
+\
+var mary = \{\
+    firstName: "Mary",\
+    lastName: "Johnson",\
+    phoneNumber: "(650) 888-8888",\
+    email: "mary.johnson@example.com"\
+\};\
+\
+var contacts = [bob, mary];\
+\
+function printPerson(person) \{\
+    console.log(person.firstName + " " + person.lastName);\
+\}\
+var list = function() \{\
+    var contactsLength = 0;\
+    for(i = 0; i < contacts.length; i++) \{\
+    printPerson(contacts[i])    \
+    \}\
+\};\
+list();\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Finding that special someone
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var bob = \{\
+    firstName: "Bob",\
+    lastName: "Jones",\
+    phoneNumber: "(650) 777-7777",\
+    email: "bob.jones@example.com"\
+\};\
+\
+var mary = \{\
+    firstName: "Mary",\
+    lastName: "Johnson",\
+    phoneNumber: "(650) 888-8888",\
+    email: "mary.johnson@example.com"\
+\};\
+\
+var contacts = [bob, mary];\
+\
+function printPerson(person) \{\
+    console.log(person.firstName + " " + person.lastName);\
+\}\
+\
+function list() \{\
+	var contactsLength = contacts.length;\
+	for (var i = 0; i < contactsLength; i++) \{\
+		printPerson(contacts[i]);\
+	\}\
+\}\
+\
+/*Create a search function\
+then call it passing "Jones"*/\
+var search = function (lastName) \{\
+    var contactsLength = contacts.length;\
+    for (var i = 0; i < contactsLength; i++) \{\
+        printPerson(contacts[i]);\
+		if (contacts[i].lastName == lastName) \{\
+		    return true; \
+		\}\
+	\}\
+	return false\
+\};\
+search("Jones")\
+\
+consoles:\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+Bob Jones\
+true
+\fs30 \cf3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+We made a friend let\'92s add Jake to the array
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var bob = \{\
+    firstName: "Bob",\
+    lastName: "Jones",\
+    phoneNumber: "(650) 777-7777",\
+    email: "bob.jones@example.com"\
+\};\
+\
+var mary = \{\
+    firstName: "Mary",\
+    lastName: "Johnson",\
+    phoneNumber: "(650) 888-8888",\
+    email: "mary.johnson@example.com"\
+\};\
+\
+///*array[array.length] = object\
+\
+var contacts = [bob, mary];\
+\
+function printPerson(person) \{\
+    console.log(person.firstName + " " + person.lastName);\
+\}\
+\
+function list() \{\
+	var contactsLength = contacts.length;\
+	for (var i = 0; i < contactsLength; i++) \{\
+		printPerson(contacts[i]);\
+	\}\
+\}\
+\
+/*Create a search function\
+then call it passing "Jones"*/\
+var search = function (lastName) \{\
+    var contactsLength = contacts.length;\
+    for (var i = 0; i < contactsLength; i++) \{\
+        printPerson(contacts[i]);\
+		if (contacts[i].lastName == lastName) \{\
+		    return true; \
+		\}\
+	\}\
+	return false\
+\};\
+search("Jones")\
+\
+\
+// Constructor function syntax\
+var Contact = function (firstName, lastName, phoneNumber, email) \{\
+\
+    this.firstName = firstName;\
+    this.lastName = lastName;\
+    this.phoneNumber = phoneNumber;\
+    this.email = email;\
+\}\
+var add = function (firstName, lastName, phoneNumber, email) \{\
+    var newPerson = new Contact (firstName, lastName, phoneNumber, email)\
+    contacts.push(newPerson);\
+\
+\};\
+add("Jake", "Evans", "801) 888-8888", "jake@somenet.net"); \
+list ()\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+An Object review
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var james = \{\
+    job: "programmer",\
+    married: false,\
+    name: "James",\
+    // add properties to this object!\
+   \
+\};\
+\
+function Person(job, married, name) \{\
+    this.job = job;\
+    this.married = married;\
+    this.name = name;\
+\};\
+\
+// create a "gabby" object using the Person constructor!\
+\
+var gabby = new Person ("student", true, "Gabby");\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Fun with functions
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(job, married) \{\
+    this.job = job;\
+    this.married = married;\
+    // add a "speak" method to Person!\
+    this.speak = function() \{\
+        console.log("Hello!")\
+    \};\
+\}\
+\
+var user = new Person("Codecademy Student",false);\
+user.speak();\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Literally speaking
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var james = \{\
+    job: "programmer",\
+    married: false,\
+    speak: function(mood) \{\
+        console.log("Hello, I am feeling " + mood); \
+    \}\
+\};\
+\
+james.speak("great");\
+james.speak("just okay");\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Who\'92s in your bracket?
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var james = \{\
+    job: "programmer",\
+    married: false\
+\};\
+\
+// set to the first property name of "james"\
+var aProperty = "job";\
+\
+// print the value of the first property of "james" \
+// using the variable "aProperty"\
+\
+console.log(james[aProperty]);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+I.D. Please
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // complete these definitions so that they will have\
+// the appropriate types\
+var anObj = \{ job: "I'm an object!" \};\
+var aNumber = 42;\
+var aString = "I'm a string!";\
+\
+console.log(typeof anObj); // should print "object"\
+console.log(typeof aNumber); // should print "number"\
+console.log(typeof aString); // should print "string"\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Know Thyself
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var myObj = \{\
+    // finish myObj\
+    name: "Wade",\
+\
+\};\
+\
+console.log( myObj.hasOwnProperty('name') ); // should print true\
+console.log( myObj.hasOwnProperty('nickname') ); // should print false\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Dressed to Impress
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var suitcase = \{\
+    shirt: "Hawaiian",\
+\};\
+\
+//console.log(suitcase.shorts);\
+\
+if (suitcase.hasOwnProperty ("shorts")) \{\
+    console.log(true)\
+    \} else \{\
+        console.log(false)\
+    \}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Getting In-timate
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var nyc = \{\
+    fullName: "New York City",\
+    mayor: "Bill de Blasio",\
+    population: 8000000,\
+    boroughs: 5\
+\};\
+\
+for(var property in nyc) \{\
+    console.log(property);\
+\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+List all the properties
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var nyc = \{\
+    fullName: "New York City",\
+    mayor: "Bill de Blasio",\
+    population: 8000000,\
+    boroughs: 5\
+\};\
+\
+// write a for-in loop to print the value of nyc's properties\
+for(var x in nyc) \{\
+    console.log(nyc[x]);\
+\};\
+\
+// using the array brackets allow the for/in loop to iterate across the values and print them out.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Class is in Session
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(name,age) \{\
+  this.name = name;\
+  this.age = age;\
+\}\
+\
+// Let's make bob again, using our constructor\
+var bob = new Person("Bob Smith", 30);\
+var susan = new Person("Susan Jordan", 35);\
+\
+// make your own class here\
+function Circle(radius) \{\
+    this.radius = radius;\
+\}\
+\
+// classes of objects can be created like the example of Person or the newly created Circle.  they are all the same type of thing, but they are not all the same thing.  Each object in a class has it\'92s own set of properties or values.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Teach Snoopy
+\b0\fs30 \cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+function Dog (breed) \{\
+  this.breed = breed;\
+\}\
+\
+// here we make buddy and teach him how to bark\
+var buddy = new Dog("Golden Retriever");\
+buddy.bark = function() \{\
+  console.log("Woof");\
+\};\
+buddy.bark();\
+\
+// here we make snoopy\
+var snoopy = new Dog("Beagle");\
+// we need you to teach snoopy how to bark here\
+snoopy.bark = function() \{\
+  console.log("bow wow");\
+\};\
+// this causes an error, because snoopy doesn't know how to bark!\
+snoopy.bark();\
+\
+// I copied and inserted the text from lines 7 - 10 and inserted them in the object Snoopy on lines 15-16.  I then edited \'91buddy\'92 to \'92snoopy\'92 and changed the output to \'91bow wow\'92\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl560\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+How do Classes Help Us?
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 \
+function Person(name,age) \{\
+  this.name = name;\
+  this.age = age;\
+\}\
+// a function that prints the name of any given person\
+var printPersonName = function (p) \{\
+  console.log(p.name);\
+\};\
+\
+var bob = new Person("Bob Smith", 30);\
+printPersonName(bob);\
+\
+// make a person called me with your name and age\
+// then use printPersonName to print your name\
+var me = new Person("Jeremy Johansen", 46);\
+printPersonName(me);\
+\
+// by using \'91me\'92 it brought my information up when I first used \'91jeremy\'92 it came back with an \'93UNDEFINED\'94 statement because I had not defined it in line 15.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97]\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Prototype Practice
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Cat(name, breed) \{\
+    this.name = name;\
+    this.breed = breed;\
+\}\
+\
+// let's make some cats!\
+var cheshire = new Cat("Cheshire Cat", "British Shorthair");\
+var gary = new Cat("Gary", "Domestic Shorthair");\
+\
+// add a method "meow" to the Cat class that will allow\
+// all cats to print "Meow!" to the console\
+Cat.prototype.meow = function() \{\
+    console.log("Meow");\
+\};\
+gary.meow();\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+It's All in the Genes
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // create your Animal class here\
+function Animal(name,numLegs) \{\
+  this.name = name;\
+  this.numLegs = numLegs;\
+\};\
+\
+// Let's make bob again, using our constructor\
+var bob = new Animal("Bob", 4);\
+//var susan = new Animal("Susan", 2);\
+\
+\
+// create the sayName method for Animal\
+Animal.prototype.sayName = function() \{\
+  console.log("Hi my name is "+this.name);\
+\};\
+bob.sayName();\
+\
+\
+\
+// provided code to test above constructor and method\
+var penguin = new Animal("Captain Cook", 2);\
+penguin.sayName();\
+\
+// using the prototype method from the dog and cat exercises I used it to have a new animal \'93Bob\'94 and a penguin both say their names on separate lines in the console. \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Marching Penguins
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // create a Penguin constructor here\
+function Penguin(name, numLegs) \{\
+    this.name = name;\
+    this.numLegs = numLegs;\
+\}\
+\
+// create a sayName method for Penguins here\
+Penguin.prototype.sayName = function() \{\
+    console.log("Hi my name is " + this.name);\
+\};\
+\
+// our test code\
+var theCaptain = new Penguin("Captain Cook", 2);\
+theCaptain.sayName();\
+\
+//  Pay close attention to the semi-colons and the curly braces in syntax.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+DRY Penguins
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // the original Animal class and sayName method\
+function Animal(name, numLegs) \{\
+    this.name = name;\
+    this.numLegs = numLegs;\
+\}\
+Animal.prototype.sayName = function() \{\
+    console.log("Hi my name is " + this.name);\
+\};\
+\
+// define a Penguin class\
+function Penguin(name) \{\
+    this.name = name;\
+    this.numLegs = 2;\
+\};\
+\
+// set its prototype to be a new instance of Animal\
+Penguin.prototype = new Animal();\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Black (and White) Penguin Magic
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // the original Animal class and sayName method\
+function Animal(name, numLegs) \{\
+    this.name = name;\
+    this.numLegs = numLegs;\
+\}\
+Animal.prototype.sayName = function() \{\
+    console.log("Hi my name is " + this.name);\
+\};\
+\
+// define a Penguin class\
+function Penguin(name) \{\
+    this.name = name;\
+    this.numLegs = 2;\
+\};\
+\
+// set its prototype to be a new instance of Animal\
+Penguin.prototype = new Animal();\
+var penguin = new Penguin ("theCaptain", 2);\
+\
+penguin.sayName();\
+\
+// my code is only the last 3 lines.  It is a blending of things I looked at not a copy & paste.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Penguins, Properties, and the Prototype
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Penguin(name) \{\
+    this.name = name;\
+    this.numLegs = 2;\
+\}\
+\
+// create your Emperor class here and make it inherit from Penguin\
+// function Emperor(name) \{\
+//     this.name = name;\
+// \}\
+Emperor.prototype = new Penguin();\
+\
+// create an "emperor" object and print the number of legs it has\
+var emperor = new Penguin ("King");\
+console.log(emperor.numLegs);\
+\
+// in this case I created lines 7-10 thinking that it was required to define the new class of \'91Emperor\'92. IT ISN\'92T!  line 10 is the only line needed to grab the attributes for the inheritance to work.  \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Up the Food-I-mean-Prototype Chain
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // original classes\
+function Animal(name, numLegs) \{\
+    this.name = name;\
+    this.numLegs = numLegs;\
+    this.isAlive = true;\
+\}\
+function Penguin(name) \{\
+    this.name = name;\
+    this.numLegs = 2;\
+    \
+\}\
+function Emperor(name) \{\
+    this.name = name;\
+    this.saying = "Waddle waddle";\
+\}\
+\
+// set up the prototype chain\
+Penguin.prototype = new Animal();\
+Emperor.prototype = new Penguin();\
+\
+var myEmperor = new Emperor("Jules");\
+\
+console.log(myEmperor.saying); // should print "Waddle waddle"\
+console.log(myEmperor.numLegs); // should print 2\
+console.log(myEmperor.isAlive); // should print true\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Open to the Public
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(first,last,age) \{\
+   this.firstName = first;\
+   this.lastName = last;\
+   this.age = age;\
+\}\
+\
+var john = new Person('John','Smith',30);\
+var myFirst = john.firstName;\
+var myLast = john.lastName;\
+\
+//declare variable myAge set to the age of the john object.\
+var myAge = john.age;\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Private Variables
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(first,last,age) \{\
+   this.firstname = first;\
+   this.lastname = last;\
+   this.age = age;\
+   var bankBalance = 7500;\
+\}\
+\
+// create your Person \
+var john = new Person("John", "Doe", "46");\
+    this.firstName = "John";\
+    this.lastName = "Doe";\
+    this.age = 46;\
+    var bankBalance = 75005005;\
+\
+// try to print his bankBalance\
+console.log(john.bankBalance);\
+\
+// logs undefined because it is not part of the properties.  it is a variable inside of the Person description.\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Accessing Private Variables
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(first,last,age) \{\
+   this.firstname = first;\
+   this.lastname = last;\
+   this.age = age;\
+   var bankBalance = 7500;\
+  \
+   this.getBalance = function() \{\
+      // your code should return the bankBalance\
+      return (bankBalance);\
+   \};\
+\}\
+\
+var john = new Person('John','Smith',30);\
+console.log(john.bankBalance);\
+\
+// create a new variable myBalance that calls getBalance()\
+var myBalance = john.getBalance();\
+console.log(john.getBalance());\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Private Methods
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(first,last,age) \{\
+   this.firstname = first;\
+   this.lastname = last;\
+   this.age = age;\
+   var bankBalance = 7500;\
+  \
+   var returnBalance = function() \{\
+      return bankBalance;\
+   \};\
+       \
+   // create the new function here\
+   \cf14 getBalance\cf0  = this.askTeller = function() \{\
+       return returnBalance;\
+   \};\
+   \
+\}\
+\
+var john = new Person('John','Smith',30);\
+console.log(john.returnBalance);\
+var myBalanceMethod = john.askTeller();\
+var myBalance = myBalanceMethod();\
+console.log(myBalance);\
+\
+//returns \cf7 \'91undefined\'92\cf0  and 7500:  the \'91undefined\'92 is for the getBalance variable.  IN THE PASTED TEXT BELOW I GOT RID OF THE \cf14 RED TEXT\cf0  BELOW AND IT STILL SHOWS AN \'91Undefined\'92 ON LINE 12 IN JSHint.\
+function Person(first,last,age) \{\
+   this.firstname = first;\
+   this.lastname = last;\
+   this.age = age;\
+   var bankBalance = 7500;\
+  \
+   var returnBalance = function() \{\
+      return bankBalance;\
+   \};\
+       \
+   // create the new function here\
+  \cf14  getBalance = \cf0 this.askTeller = function() \{\
+       return returnBalance;\
+   \};\
+   \
+\}\
+\
+var john = new Person('John','Smith',30);\
+console.log(john.returnBalance);\
+var myBalanceMethod = john.askTeller();\
+var myBalance = myBalanceMethod();\
+console.log(myBalance);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Passing Arguments
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Person(first,last,age) \{\
+   this.firstname = first;\
+   this.lastname = last;\
+   this.age = age;\
+   var bankBalance = 7500;\
+  \
+   this.askTeller = function(pass) \{\
+     if (pass == 1234) return bankBalance;\
+     else return "Wrong password.";\
+   \};\
+\}\
+\
+var john = new Person('John','Smith',30);\
+/* the variable myBalance should access askTeller()\
+   with a password as an argument  */\
+var myBalance = john.askTeller(1234);\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Looks For-In To Me
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var languages = \{\
+    english: "Hello!",\
+    french: "Bonjour!",\
+    notALanguage: 4,\
+    spanish: "Hola!"\
+\};\
+\
+// print hello in the 3 different languages\
+for(var x in languages) \{\
+    if (isNaN (languages[x])) \{ \
+    console.log(languages[x]);\
+    \}\
+\};\
+  \
+//  if I\'92m searching for something use an \'91if\'92 statement  (ie- \'93 if (isNaN (languages[x])) \{\'85\}). \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Hello? Yes, This is Dog
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function Dog (breed) \{\
+    this.breed = breed;\
+\};\
+\
+// add the sayHello method to the Dog class \
+// so all dogs now can say hello\
+Dog.prototype.sayHello = function() \{\
+    console.log("Hello this is a " +this.breed + " dog");\
+\};\
+\
+var yourDog = new Dog("golden retriever");\
+yourDog.sayHello();\
+\
+var myDog = new Dog("dachshund");\
+myDog.sayHello();\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+So Meta I Can't Take It!
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 // what is this "Object.prototype" anyway...?\
+var prototypeType = typeof Object.prototype;\
+console.log(prototypeType);\
+\
+// now let's examine it!\
+var hasOwn = Object.prototype.hasOwnProperty('hasOwnProperty');\
+console.log(hasOwn);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Private Eye
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function StudentReport() \{\
+    var grade1 = 4;\
+    var grade2 = 2;\
+    var grade3 = 1;\
+    this.getGPA = function() \{\
+        return (grade1 + grade2 + grade3) / 3;\
+    \};\
+\}\
+\
+var myStudentReport = new StudentReport();\
+\
+// //for(var x in myStudentReport) \{\
+// //    if(typeof myStudentReport[x] !== "function") \{\
+// //        console.log("Muahaha! " + myStudentReport[x]);\
+//     \}\
+// \}\
+\
+console.log("Your overall GPA is " + myStudentReport.getGPA()); \
+\
+// remember that a function is a wrapper and in that wrapper you can call or access all the properties of that item.  outside of it you need resources to access that private data. \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+SECTION 8\
+Shut the Shop!
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 //Create the object called cashRegister \
+//and initialize its total property\
+\
+var cashRegister = \{\
+    total: 0\
+\}\
+\
+//Using dot notation change the total property\
+\
+cashRegister.total = 2.99;\
+\
+//  remember Object Literal notation for the Object and the declaring or redeclaring of values.\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\fs96 \cf0 use jshint.com for examining code
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Manually Add it Up?
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var cashRegister = \{\
+    total:0,\
+    add: function(itemCost)\{\
+        this.total += itemCost;\
+    \}\
+\};\
+\
+//call the add method for our items\
+   \
+    cashRegister.add(0.98);\
+    cashRegister.add(1.23);\
+    cashRegister.add(4.99);\
+    cashRegister.add(0.45);\
+    \
+//Show the total bill\
+console.log('Your bill is '+cashRegister.total);\
+\
+// I was trying to set each item to a variable with a value.  The instructions didn\'92t want me to type an item in and have it pass through the cost.  it just wanted the values to add up without an item description.\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var cashRegister = \{\
+    total: 0,\
+//insert the add method here    \
+    add: function(itemCost) \{\
+        this.total += itemCost;\
+    \},\
+  scan: function (item) \{\
+        switch (item) \{ \
+        case "eggs": \
+            this.add(0.98); \
+            break;\
+        \
+        case "milk": \
+            this.add(1.23); \
+            break;\
+        \
+        //Add other 2 items here\
+        \
+        case "magazine":\
+            this.add(4.99);\
+            break;\
+            \
+        case "chocolate":\
+            this.add(0.45);\
+            break;\
+         default:\
+            return true;\
+        \}\
+    \}\
+\};\
+\
+//Scan 2 eggs and 3 magazines\
+cashRegister.scan("eggs");\
+cashRegister.scan("eggs");\
+cashRegister.scan("magazine");\
+cashRegister.scan("magazine");\
+cashRegister.scan("magazine");\
+\
+//Show the total bill\
+console.log('Your bill is '+cashRegister.total);\
+\
+// Make sure the syntax is correct in the this.total declaration on line 5. (+=)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+I Have to Scan It More Than Once?
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var cashRegister = \{\
+    total:0,\
+    add: function(itemCost)\{\
+        this.total += itemCost;\
+    \},\
+    scan: function(item, quantity) \{\
+        switch (item) \{\
+        case "eggs": this.add(0.98 * quantity); break;\
+        case "milk": this.add(1.23 * quantity); break;\
+        case "magazine": this.add(4.99 * quantity); break;\
+        case "chocolate": this.add(0.45 * quantity); break;\
+        \}\
+    \}\
+\};\
+\
+// scan each item 4 times\
+cashRegister.scan("eggs", 4);\
+cashRegister.scan("milk", 4);\
+cashRegister.scan("magazine", 4);\
+cashRegister.scan("chocolate", 4);\
+\
+//Show the total bill\
+console.log('Your bill is '+cashRegister.total); \
+\
+// inserting another parameter means to insert it in the function line before the closing ) and the \{\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Bleep Bleep
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 var cashRegister = \{\
+    total:0,\
+    //Dont forget to add your property\
+    add: function(itemCost) \{\
+        this.lastTransactionAmount = itemCost;\
+        this.total +=  itemCost;\
+    \},\
+    lastTransactionAmount: 0,\
+        \
+    scan: function(item,quantity) \{\
+        switch (item) \{\
+        case "eggs": this.add(0.98 * quantity); break;\
+        case "milk": this.add(1.23 * quantity); break;\
+        case "magazine": this.add(4.99 * quantity); break;\
+        case "chocolate": this.add(0.45 * quantity); break;\
+        \}\
+        return true;\
+    \},\
+    //Add the voidLastTransaction Method here\
+    voidLastTransaction: function() \{\
+        this.total -= this.lastTransactionAmount;\
+    \}\
+    \
+    \
+    \
+\};\
+\
+cashRegister.scan('eggs',1);\
+cashRegister.scan('milk',1);\
+cashRegister.scan('magazine',1);\
+cashRegister.scan('chocolate',4);\
+\
+//Void the last transaction and then add 3 instead\
+cashRegister.voidLastTransaction();\
+\
+cashRegister.scan('chocolate',3);\
+//Show the total bill\
+console.log('Your bill is '+cashRegister.total);\
+\
+// Several things need to be remembered in this exercise. \
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Cash register - Staff Discount
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 function StaffMember(name,discountPercent)\{\
+    this.name = name;\
+    this.discountPercent = discountPercent;\
+\}\
+\
+var sally = new StaffMember("Sally",5);\
+var bob = new StaffMember("Bob",10);\
+\
+// Create yourself again as 'me' with a staff discount of 20%\
+var me = new StaffMember("Jeremy",20);\
+\
+var cashRegister = \{\
+    total:0,\
+    lastTransactionAmount: 0,\
+    add: function(itemCost)\{\
+        this.total += (itemCost || 0);\
+        this.lastTransactionAmount = itemCost;\
+    \},\
+    scan: function(item,quantity)\{\
+        switch (item)\{\
+        case "eggs": this.add(0.98 * quantity); break;\
+        case "milk": this.add(1.23 * quantity); break;\
+        case "magazine": this.add(4.99 * quantity); break;\
+        case "chocolate": this.add(0.45 * quantity); break;\
+        \}\
+        return true;\
+    \},\
+    voidLastTransaction : function()\{\
+        this.total -= this.lastTransactionAmount;\
+        this.lastTransactionAmount = 0;\
+    \},\
+    // Create a new method applyStaffDiscount here\
+    applyStaffDiscount: function(employee)\{\
+        this.employee = employee;\
+        this.total -= this.total * (employee.discountPercent/100);\
+    \}\
+    \
+\};\
+\
+cashRegister.scan('eggs',1);\
+cashRegister.scan('milk',1);\
+cashRegister.scan('magazine',3);\
+// Apply your staff discount by passing the 'me' object \
+// to applyStaffDiscount\
+cashRegister.applyStaffDiscount(me);\
+\
+// Show the total bill\
+console.log('Your bill is '+cashRegister.total.toFixed(2));\
+\
+// going through this was time consuming but not difficult.  There was a logical error in the applyStaffDiscount method with the dividing and multiplying concepts but all errors were resolved when we straightened that out.  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+DASH LESSONS\
+website for Anna
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+<head>\
+  <title>Jeremy Johansen</title>\
+  <style>\
+    body \{\
+      text-align: center;\
+      background: url("http://dash.ga.co/assets/anna-bg.png");\
+      background-size: cover;\
+      background-position: center;\
+      color: white;\
+      font-family: helvetica;\
+    \}\
+    p \{\
+      font-size: 22px;\
+    \}\
+    input \{\
+      border: 0;\
+      padding: 10px;\
+      font-size: 18px;\
+    \}\
+    input[type="submit"] \{\
+      background: red;\
+      color: white;\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <img src="/assets/anna.png">\
+  <p>Hi! I'm Jeremy, an Orem-based entrepreneur. Say 'Hi' by sending me an email!</p>\
+  <input type="email" placeholder="Your email">\
+  <input type="submit">\
+</body>\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Our Site
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+<head>\
+  <title>Jeremy and Gina Johansen</title>\
+  <style>\
+    body \{\
+      text-align: center;\
+      background: url("http://i.imgur.com/FU1LH1A.jpg");\
+      background-size: 50%;\
+      background-position: center;\
+      color: white;\
+      font-family: helvetica;\
+    \}\
+    p \{\
+      font-size: 22px;\
+      margin-top: 850px;\
+      background-color: #9FBEBE;\
+      padding: 15px;\
+      width: 50%;\
+      margin-left: auto;\
+      margin-right: auto;\
+      border-radius: 25px;\
+      line-height: 150%;\
+    \}\
+    input \{\
+      border: 0;\
+      padding: 10px;\
+      font-size: 18px;\
+    \}\
+    input[type="submit"] \{\
+      background: #9FBEBE;\
+      color: blue;\
+    \}\
+    img \{\
+      width: 100%;\
+      border-style: solid;\
+      border-color: #00e5ee;\
+      border-width: 7px;\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <p>Hi! We are Jeremy and Gina Johansen, we are Orem-based entrepreneurs. Say 'Hi' by sending us an email!</p>\
+  <input type="email" placeholder="Your email">\
+  <input type="submit">\
+</body>\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Jeff\'92s Blog
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+<head>\
+  <link href="/normalize.css" rel="stylesheet">\
+  <style>\
+    header \{\
+      text-align: center;\
+      background: url('http://dash.ga.co/assets/jeff-bg.png');\
+      background-size: cover;\
+      color: white;\
+    \}\
+    a \{\
+      color: white;\
+    \}\
+    h1 \{\
+      font-size: 70px;\
+    \}\
+    img \{\
+      margin: 40px 0px 0px 0px;\
+      border: 7px solid white;\
+      border-radius: 20px;\
+    \}\
+    ul \{\
+      padding: 10px;\
+      background: rgba(0, 0, 0, 0.5);\
+    \}\
+    li \{\
+      display: inline;\
+      padding: 0px 10px 0px 10px;\
+    \}\
+    article \{\
+      max-width: 500px;\
+      padding: 20px;\
+      margin: 0px auto;\
+    \}\
+    @media (max-width: 500px) \{\
+      h1 \{\
+        font-size: 36px;\
+      \}\
+       li \{\
+         display: block;\
+         padding: 5px;\
+        \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <header>\
+    <img src="/assets/jeff.png">\
+    <h1>Jeff's Blog</h1>\
+    <ul>\
+      <li><a href="#">About Me</a></li>\
+      <li><a href="#">Best Poems</a></li>\
+      <li><a href="#">Worst Poems</a></li>\
+    </ul>\
+  </header>\
+  <article>\
+    <h2>VHS umami pop-up trust fund</h2>\
+    <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p><button>Like</button>\
+</article>\
+<article>\
+    <h2>Sartorial synth Echo Park, roof party</h2>\
+  <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>\
+<button>Like</button></article>\
+<article>\
+    <h2>Forage food truck keytar master cleanse</h2>\
+  <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic Cosby sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>\
+<button>Like</button></article>\
+<script>alert("Javascript works!")\
+$("button").on("click", function() \{\
+alert("A button was clicked!")\
+\})\
+</script>\
+</body>\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Our Blog
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+<head>\
+  <link href="/normalize.css" rel="stylesheet">\
+  <style>\
+    header \{\
+      text-align: center;\
+      background: url('http://i.imgur.com/FU1LH1A.jpg');\
+      background-size: cover;\
+      color: white;\
+    \}\
+    a \{\
+      color: white;\
+    \}\
+    h1 \{\
+      font-size: 70px;\
+      color: teal;\
+      background: white;\
+      border-radius: 50px;\
+      width: 50%;\
+      margin: 400px;\
+    \}\
+    img \{\
+      margin: 100px;\
+      border: 20px solid white;\
+      border-radius: 7000px;\
+      width: 50%;\
+      height: 90%;\
+    \}\
+    ul \{\
+      padding: 10px;\
+      background: rgba(0,0,0,0.5);\
+    \}\
+    li \{\
+      display: inline;\
+      padding: 0px 10px 0px 10px;\
+    \}\
+    article \{\
+      max-width: 500px;\
+      padding: 20px;\
+      margin: 0 auto;\
+    \}\
+    @media (max-width: 500px) \{\
+      h1 \{\
+        font-size: 36px;\
+        padding: 5px;\
+      \}\
+      li \{\
+        padding: 5px;\
+        display: block;\
+      \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <header>\
+    <img src="http://i.imgur.com/FU1LH1A.jpg">\
+    <h1>Jeremy & Gina's Blog</h1>\
+    <ul>\
+      <li><a href="#">About Me</a></li>\
+      <li><a href="#">Best Poems</a></li>\
+      <li><a href="#">Worst Poems</a></li>\
+    </ul>\
+  </header>\
+  <article>\
+    <h2>VHS umami pop-up trust fund</h2>\
+    <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>\
+    <button>Like</button>\
+  </article>\
+  <article>\
+    <h2>Sartorial synth Echo Park, roof party</h2>\
+    <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>\
+    <button>Like</button>\
+  </article>\
+  <article>\
+    <h2>Forage food truck keytar master cleanse</h2>\
+    <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic Cosby sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>\
+    <button>Like</button>\
+  </article>\
+  <script>\
+    $("button").on("click", function() \{\
+      alert("Clicked!");\
+    \});\
+  </script>\
+</body>\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Esha\'92s Restaurant Site part 1
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+\
+<head>\
+\
+<style>\
+body \{\
+  font-family: helvetica, sans-serif;\
+  margin: 0 auto;\
+  max-width: 600px;\
+\}\
+div \{\
+  height: 200px;\
+  background-size: cover;\
+  position: relative;\
+  margin: 40px 0 0 0;\
+  border-radius: 12px;\
+\}\
+\
+p \{\
+  color: rgba(255,255,255,1);\
+  background: rgba(0,0,0,1);\
+  padding: 10px;\
+  line-height: 28px;\
+  text-align: justify;\
+  position: absolute;\
+  bottom: 0;\
+  margin: 0;\
+\}\
+\
+.first\{\
+  background-image: url("http://dash.ga.co/assets/firstcourse.jpg");\
+\}\
+.second\{\
+  background-image: url("http://dash.ga.co/assets/secondcourse.jpg");\
+\}\
+.dessert\{\
+  background-image: url("http://dash.ga.co/assets/dessertcourse.jpg");\
+\}\
+</style>\
+\
+</head>\
+\
+<body>\
+<h1>esha's restaurant</h1>\
+<div class="first">\
+<p>welsh onion soko $14<br />\
+<small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil. </small></p>\
+</div>\
+<div class="second">\
+<p>pastrami boudin tongue $22<br />\
+<small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p>\
+</div>\
+<div class="dessert">\
+<p>fruitcake marzipan pudding dragee $8<br />\
+<small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>\
+</div>\
+</body>\
+ \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 MORE WEBFONTS go to http://www.google.com/fonts/\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Esha\'92s Restaurant Site part 2
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+\
+<head>\
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>\
+<style>\
+body \{\
+  font-family: helvetica, sans-serif;\
+  margin: 0 auto;\
+  max-width: 600px;\
+  background: #232323;\
+\}\
+div \{\
+  height: 200px;\
+  background-size: cover;\
+  position: relative;\
+  margin: 40px 0 0 0;\
+  border-radius: 12px;\
+\}\
+\
+p \{\
+  color: rgba(255,255,255,1);\
+  padding: 10px;\
+  line-height: 28px;\
+  text-align: justify;\
+  position: absolute;\
+  bottom: 0;\
+  margin: 0;\
+  background: black;\
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));\
+  background:-webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));\
+  background:-moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));\
+\}\
+\
+.first\{\
+  background-image: url("http://dash.ga.co/assets/firstcourse.jpg");\
+\}\
+.second\{\
+  background-image: url("http://dash.ga.co/assets/secondcourse.jpg");\
+\}\
+.dessert\{\
+  background-image: url("http://dash.ga.co/assets/dessertcourse.jpg");\
+\}\
+.price\{\
+  float: right;\
+  \}\
+h1 \{\
+font-family: 'Londrina Shadow', cursive;\
+font-size: 75px;\
+text-align: center;\
+margin: 60px 0 0 0;\
+color: #aaaaaa;\
+\}\
+h2 \{\
+text-align: center;\
+margin: 0px 0 70px 0;\
+color: #bbbbbb;\
+  \}\
+</style>\
+\
+</head>\
+\
+<body>\
+<h1>esha's restaurant</h1>\
+<h2>A New York City Eatery</h2>\
+<div class="first">\
+<p>welsh onion soko <span class="price">$14</span><br />\
+<small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil. </small></p>\
+</div>\
+<div class="second">\
+<p>pastrami boudin tongue <span class="price">$22</span><br />\
+<small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p>\
+</div>\
+<div class="dessert">\
+<p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />\
+<small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>\
+</div>\
+</body>\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Classroom exercise - look for a string within a string (used \'93.\'94 wildcard)
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf8 \expnd0\expndtw0\kerning0
+var re2 = /co.e/g;\
+\pard\pardeftab720\partightenfactor0
+\cf8 console.log(re2.test("code"));\
+\
+var temp = "code, cofe, code";\
+var count = (temp.match(re2)).length;\
+console.log(count);\cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Esha\'92s Restaurant continued
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+\
+<head>\
+<script src="/assets/jquery.js"></script>\
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>\
+\
+<style>\
+body \{\
+  font-family: helvetica, sans-serif;\
+  margin: 0 auto;\
+  max-width: 600px;\
+  background: #232323;\
+\}\
+div \{\
+  height: 200px;\
+  background-size: ;\
+  position: relative;\
+  margin: 40px 0 0 0;\
+  border-radius: 12px;\
+\}\
+h1 \{\
+  font-family: 'Londrina Shadow', cursive;\
+  text-align: center;\
+  font-size: 75px;\
+  color: #aaaaaa;\
+  margin: 60px 0 0 0;\
+\}\
+h2 \{\
+  text-align: center;\
+  color: #bbbbbb;\
+  margin: 0px 0 70px 0;\
+\}\
+p \{\
+  color: rgba(255,255,255,1);\
+  background: black;\
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));\
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));\
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));\
+  padding: 10px;\
+  line-height: 28px;\
+  text-align: justify;\
+  position: absolute;\
+  bottom: 0;\
+  margin: 0;\
+  height: 30px;\
+  transition: height .5s;\
+  -webkit-transition: height .5s;\
+  -moz-transition: height .5s;\
+\}\
+.show-description p \{\
+  height: 150px;\
+\}\
+.show-description small \{\
+  opacity: 1;\
+\}\
+.first \{\
+  background-image: url("http://dash.ga.co/assets/firstcourse.jpg");\
+\}\
+.second \{\
+  background-image: url("http://dash.ga.co/assets/secondcourse.jpg");\
+\}\
+.dessert \{\
+  background-image: url("http://dash.ga.co/assets/dessertcourse.jpg");\
+\}\
+.price \{\
+  float: right;\
+\}\
+small \{\
+    opacity: 0;\
+    \}\
+@media (max-width: 500px) \{\
+  h1 \{\
+    font-size: 50px;\
+    margin: 20px 0 0 0;\
+    line-height: 40px;\
+    \}\
+  h2 \{\
+    font-size: 20px;\
+    margin: 20px 0 30px 0;\
+  \}\
+  div \{\
+    margin: 20px 12px 0 12px;\
+  \}\
+  p \{\
+    font-size: 20px;\
+    line-height: 24px;\
+  \}\
+  small \{\
+    font-size: 16px;\
+    \}\
+\}\
+</style>\
+\
+</head>\
+\
+<body>\
+<h1>esha's restaurant</h1>\
+<h2>a New York City eatery</h2>\
+<div class="first show-description">\
+  <p>welsh onion soko <span class="price">$14</span><br />\
+  <small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil. </small></p>\
+</div>\
+\
+<div class="second show-description">\
+  <p>pastrami boudin tongue <span class="price">$22</span><br />\
+  <small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p>\
+</div>\
+  \
+<div class="dessert show-description">\
+  <p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />\
+  <small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>\
+</div>\
+\
+<script>\
+$('div').on('click', function() \{\
+  $(this).toggleClass('show-description');\
+\});\
+</script>\
+\
+</body>\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Our Site
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+\
+<head>\
+<script src="/assets/jquery.js"></script>\
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>\
+<style>\
+\
+body \{\
+  font-family: helvetica, sans-serif;\
+  margin: 0 auto;\
+  max-width: 600px;\
+  background: teal;\
+    background: linear-gradient(bottom, rgba(36,181,163,.4), rgba(36,181,163,1));\
+  background: -webkit-linear-gradient(bottom, rgba(36,181,163,.4), rgba(36,181,163,1));\
+  background: -moz-linear-gradient(bottom, rgba(36,181,163,.4), rgba(36,181,163,1));\
+\}\
+div \{\
+  height: 200px;\
+  background-size: cover;\
+  position: relative;\
+  margin: 40px 0 0 0;\
+  border-radius: 12px;\
+\}\
+h1 \{\
+  font-family: 'Londrina Shadow', cursive;\
+  text-align: center;\
+  font-size: 75px;\
+  color: #aaaaaa;\
+  margin: 60px 0 0 0;\
+\}\
+h2 \{\
+  font-family: 'Londrina Shadow', cursive;\
+  text-align: center;\
+  color: #bbbbbb;\
+  margin: 0px 0 70px 0;\
+\}\
+p \{\
+  color: rgba(255,255,255,1);\
+  background: black;\
+  background: linear-gradient(bottom, rgba(36,181,163,.4), rgba(36,181,163,1));\
+  background: -webkit-linear-gradient(bottom, rgba(36,181,163,.4), rgba(36,181,163,1));\
+  background: -moz-linear-gradient(bottom, rgba(36,181,163,.4), rgba(36,181,163,1));\
+  padding: 1px;\
+  line-height: 28px;\
+  text-align: justify;\
+  position: absolute;\
+  bottom: 0;\
+  width: 100%;\
+  margin: 0;\
+  height: 30px;\
+  transition: height .5s;\
+  -webkit-transition: height .5s;\
+  -moz-transition: height .5s;\
+\}\
+\
+small \{\
+  opacity: 0;\
+\}\
+\
+.show-description p \{\
+  height: 150px;\
+\}\
+\
+.show-description small \{\
+  opacity: 1;\
+\}\
+\
+.first\{\
+  background-image: url("http://dash.ga.co/assets/firstcourse.jpg");\
+\}\
+.second\{\
+  background-image: url("http://dash.ga.co/assets/secondcourse.jpg");\
+\}\
+.dessert\{\
+  background-image: url("http://dash.ga.co/assets/dessertcourse.jpg");\
+\}\
+.price \{\
+  float: right;\
+\}\
+@media (max-width: 500px) \{\
+  h1 \{\
+    font-size: 50px;\
+    margin-top: 20px;\
+    line-height: 40px;\
+  \}\
+  h2 \{\
+    font-size: 20px;\
+    margin: 20px 0 30px 0;\
+  \}\
+  div \{\
+    margin: 20px 12px 0 12px;\
+  \}\
+  p \{\
+    font-size: 20px;\
+    line-height: 24px;\
+  \}\
+  small \{\
+    font-size: 16px;\
+  \}\
+\}\
+\
+</style>\
+\
+</head>\
+\
+<body>\
+<h1>DooDilly's</h1>\
+<h2>soft serve ice cream machine rentals</h2>\
+<div class="first">\
+  <p>Single-Serve machines $50 deposit / machine / day<span class="price">$125 / day / machine</span><br />\
+  <small>Just what you need on a birthday, small recepotion </small></p>\
+</div>\
+\
+<div class="second">\
+  <p>Double Barrel "TWIST" machine <span class="price">$250 / day (delivery required)</span><br />\
+  <small>These wonderful machines can easily take the place of 2 single-serve machines and give you the added perk of "TWIST".</small></p>\
+</div>\
+  \
+<div class="dessert">\
+  <p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />\
+  <small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>\
+</div>\
+\
+<script>\
+  $('div').on('click', function() \{\
+      $(this).toggleClass('show-description');\
+  \});\
+</script>\
+\
+</body>\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+COTS BOTS
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+\
+<head>\
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>\
+<script src="/assets/jquery.js"></script>\
+<style>\
+\
+.robot \{\
+  position: relative;\
+  left: 200px;\
+\}\
+\
+.beep \{\
+  width: 5px;\
+  height: 0;\
+  border: 5px solid transparent;\
+  border-top: 10px solid #777;\
+  border-bottom: 80px solid #888;\
+  position: relative;\
+  left: 140px;\
+\}\
+\
+@keyframes blink \{\
+  50% \{\
+    background: radial-gradient(circle, red 15%, transparent 40%), #cc5;\
+  \}\
+\}\
+@-webkit-keyframes blink \{\
+  50% \{\
+    background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;\
+  \}\
+\}\
+@-moz-keyframes blink \{\
+  50% \{\
+    background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;\
+  \}\
+\}\
+.laser \{\
+  animation: blink .5s infinite;\
+  -webkit-animation: blink .5s infinite;\
+  -moz-animation: blink .5s infinite;\
+\}\
+.brain \{\
+  background: radial-gradient(circle, white 15%, transparent 40%), #cc5;\
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5; \
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;\
+  background-size: 75px 150px;\
+  height: 150px;\
+  width: 150px;\
+  border-radius: 60px 60px 10px 10px;\
+  border-bottom: 40px solid #666;\
+  position: relative;\
+  left: 70px;\
+\}\
+.torso \{\
+  height: 0;\
+  width: 140px;\
+  border-top: 300px solid #bc6;\
+  border-left: 75px solid transparent;\
+  border-right: 75px solid transparent;\
+  border-radius: 20px 20px 100px 100px;\
+\}\
+.left \{\
+  font-family: 'Poller One', verdana, arial, sans-serif;\
+  font-weight: bold;\
+  font-size: 250px;\
+  color: #666;\
+  transform: rotate(200deg);\
+  -webkit-transform: rotate(200deg);\
+  -moz-transform: rotate(200deg);\
+  position: relative;\
+  top: -320px;\
+  left: -190px;\
+  z-index: -1;\
+\}\
+.right \{\
+  font-family: 'Poller One', verdana, arial, sans-serif;\
+  font-weight: bold;\
+  font-size: 250px;\
+  color: #666;\
+  transform: scaleY(-1) rotate(20deg);\
+  -webkit-transform: scaleY(-1) rotate(20deg);\
+  -moz-transform: scaleY(-1) rotate(20deg);\
+  position: relative;\
+  top: -620px;\
+  left: 190px;\
+  z-index: -1;\
+\}\
+.foot \{\
+  height: 40px;\
+  width: 40px;\
+  background: #ccc;\
+  border-radius: 40px;\
+  border: 15px solid #999;\
+  position: relative;\
+  left: 110px;\
+  top: -10px;\
+  z-index: -1;\
+\}\
+\
+.dance \{\
+  \
+\}\
+\
+@keyframes dance \{\
+  from \{\
+    left: 800px;\
+  \}\
+\}\
+\
+@-webkit-keyframes dance \{\
+  from \{\
+    left: 800px;\
+  \}\
+\}\
+\
+@-moz-keyframes dance \{\
+  from \{\
+    left: 800px;\
+  \}\
+\}\
+\
+img \{\
+  animation: dance 4s infinite;\
+  -webkit-animation: dance 4s infinite;\
+  -moz-animation: dance 4s infinite;\
+  position: absolute;\
+  top: 200px;\
+  left: 400px;\
+\}\
+\
+</style>\
+</head>\
+\
+<body>\
+\
+<div class="robot">\
+  <div class="beep"></div>\
+  <div class="brain"></div>\
+  <div class="torso">\
+    <div class="left">j</div>\
+    <div class="right">j</div>\
+  </div>\
+  <div class="foot"></div>\
+</div>\
+\
+<button class="flasheyes">laser eyes on/off</button>\
+<button class="color">change color!</button>\
+<button class="moves">break/dance</button>\
+\
+<img src="/assets/dance_cotter.gif">\
+\
+<script>\
+// When eyes button is clicked, toggle laser class on brain\
+$(".flasheyes").click(function() \{\
+  $(".brain").toggleClass('laser');\
+\});\
+\
+// When color button is clicked...\
+$(".color").click(function() \{\
+  // assign each named color a random number 0-255\
+  var red = Math.floor(Math.random() * 255);\
+  var green = Math.floor(Math.random() * 255);\
+  var blue = Math.floor(Math.random() * 255);\
+  \
+  //Generate an RGBA value from red, greeen, and blue\
+  var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';\
+  \
+  // and change the body's background to our random color\
+  $("body").css("background", randomRGBA);\
+  // Display the RGBA value in an alert window\
+  //alert(randomRGBA);\
+\});\
+  \
+//When Break/Dance is clicked turn off "dance_cotter.gif"\
+$(".moves").click(function() \{\
+  $("img").toggle();\
+\});\
+\
+</script>\
+\
+</body>\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Lin\'92s Mad Lib
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 <!DOCTYPE html>\
+\
+<head>\
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>\
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>\
+<script src="/assets/jquery.js"></script>\
+<style>\
+body \{\
+  text-align: center;\
+  font-family: 'Fjalla One';\
+  font-size: 20px;\
+  background: #e6eaf0;\
+\}\
+button \{\
+  margin: 40px;\
+  \}\
+  input \{\
+    font-size: 24px;\
+    \}\
+    .fill \{\
+      background: white;\
+      color: red;\
+      border-bottom: 2px black solid;\
+      font-family: 'Shadows Into Light';\
+      padding: 0 6px;\
+      margin: 4px;\
+      \}\
+</style>\
+</head>\
+\
+<body>\
+\
+<div class="prompt"></div>\
+<button>Next</button>\
+<script>\
+// List of prompts for the user\
+var prompts = [\
+	'Type your name',\
+	'Type an adjective',\
+	'Type a noun'\
+   ];\
+\
+var answers=[];\
+// Keep track of current prompt we're on\
+var currentPrompt = 0;\
+\
+// A function that will call the next prompt\
+var nextPrompt = function() \{\
+  //if there's no answer in the form\
+  if (currentPrompt != 0)\{\
+    answers.push($('input').val());\
+  \}\
+	// if there is a next prompt\
+	if (currentPrompt < prompts.length) \{\
+		// put first prompt in all html elements with class \
+		$('.prompt').html(prompts[currentPrompt] +'<br><input type="text">');\
+		// move the next prompt into variable currentPrompt \
+		currentPrompt = currentPrompt + 1;\
+	\}\
+	//or else if we're at the end of the array\
+	else \{\
+		// put a new message into the html.\
+		showFinal();\
+	\}\
+\}\
+\
+//puts user answers into HTML\
+var showFinal = function() \{\
+  $('.prompt').html('This is the story of <span class="fill">'+answers[0]+'</span> and the <span class="fill">'+answers[1]+'</span> <span class="fill">'+answers[2]+'</span>.');\
+  $('button').hide();\
+\}\
+// run nextPrompt function when button is clicked\
+$('button').click(function() \{\
+	nextPrompt();\
+\});\
+\
+// Show the first prompt as soon as js loads\
+nextPrompt();\
+</script>\
+\
+</body>\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Terminal Commands (Codecademy)
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl440\sa120\partightenfactor0
+\ls1\ilvl0
+\f3 \cf15 		\expnd0\expndtw0\kerning0
+Options modify the behavior of commands:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl440\sa120\partightenfactor0
+\ls1\ilvl1
+\f1\fs22 \cf15 \cb16 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+ls -a
+\f3\fs24 \cb1  lists all contents of a directory, including hidden files and directories\
+\ls1\ilvl1
+\f1\fs22 \cb16 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+ls -l
+\f3\fs24 \cb1  lists all contents in long format\
+\ls1\ilvl1
+\f1\fs22 \cb16 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+ls -t
+\f3\fs24 \cb1  orders files and directories by the time they were last modified\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl440\sa240\partightenfactor0
+\ls1\ilvl1\cf15 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+Multiple options can be used together, like 
+\f1\fs22 \cb16 ls -alt
+\f3\fs24 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl440\sa120\partightenfactor0
+\ls1\ilvl0\cf15 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+From the command line, you can also copy, move, and remove files and directories:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl440\sa120\partightenfactor0
+\ls1\ilvl1
+\f1\fs22 \cf15 \cb16 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+cp
+\f3\fs24 \cb1  copies files\
+\ls1\ilvl1
+\f1\fs22 \cb16 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+mv
+\f3\fs24 \cb1  moves and renames files\
+\ls1\ilvl1
+\f1\fs22 \cb16 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+rm
+\f3\fs24 \cb1  removes files\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\fs22 \cf15 \cb16 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+rm -r
+\f3\fs24 \cb1  removes directories\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl440\sa240\partightenfactor0
+\ls1\ilvl0\cf15 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+Wildcards are useful for selecting groups of files and directories
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f4\b\fs28 \cf0 \expnd0\expndtw0\kerning0
+\
+Nano Command Line Options\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\b0\fs24 \cf0 nano
+\f4  takes the following options from the command line:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 +LINE,COLUMN
+\f4 \
+Start at line number LINE and column number COLUMN (at least one of which must be specified) instead of the default of line 1, column 1. \
+
+\f2 -?
+\f4 \
+Same as 
+\f2 -h, --help
+\f4 . \
+
+\f2 -A, --smarthome
+\f4 \
+Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line. \
+
+\f2 -B, --backup
+\f4 \
+When saving a file, back up the previous version of it to the current filename suffixed with a ~. \
+
+\f2 -C <dir>, --backupdir=<dir>
+\f4 \
+Set the directory where 
+\f2 nano
+\f4  puts unique backup files if file backups are enabled. \
+
+\f2 -D, --boldtext
+\f4 \
+Use bold text instead of reverse video text. \
+
+\f2 -E, --tabstospaces
+\f4 \
+Convert typed tabs to spaces. \
+
+\f2 -F, --multibuffer
+\f4 \
+Enable multiple file buffers, if available. \
+
+\f2 -H, --historylog
+\f4 \
+Log search and replace strings to ~/.nano_history, so they can be retrieved in later sessions, if nanorc support is available. \
+
+\f2 -I, --ignorercfiles
+\f4 \
+Don't look at SYSCONFDIR/nanorc or ~/.nanorc, if nanorc support is available. \
+
+\f2 -K, --rebindkeypad
+\f4 \
+Interpret the numeric keypad keys so that they all work properly. You should only need to use this option if they don't, as mouse support won't work properly with this option enabled. \
+
+\f2 -L, --nonewlines
+\f4 \
+Don't add newlines to the ends of files. \
+
+\f2 -N, --noconvert
+\f4 \
+Don't convert files from DOS/Mac format. \
+
+\f2 -O, --morespace
+\f4 \
+Use the blank line below the titlebar as extra editing space. \
+
+\f2 -Q <str>, --quotestr=<str>
+\f4 \
+Set the quoting string for justifying. The default value is\
+
+\f2 ^([ \\t]*[|>:\}#])+
+\f4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 if extended regular expression support is available, or "> " otherwise. Note that 
+\f2 \\t
+\f4  above stands for a literal Tab character. \uc0\u8232 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 -R, --restricted
+\f4 \
+Restricted mode: don't read or write to any file not specified on the command line; read any nanorc files; allow suspending; allow a file to be appended to, prepended to, or saved under a different name if it already has one; or use backup files or spell checking. Also accessible by invoking 
+\f2 nano
+\f4  with any name beginning with 'r' (e.g. "rnano"). \
+
+\f2 -S, --smooth
+\f4 \
+Enable smooth scrolling. Text will scroll line-by-line, instead of the usual chunk-by-chunk behavior. \
+
+\f2 -T <#cols>, --tabsize=<#cols>
+\f4 \
+Set the displayed tab length to #cols columns. The value of #cols must be greater than 0. The default value is 8. \
+
+\f2 -U, --quickblank
+\f4 \
+Do quick statusbar blanking. Statusbar messages will disappear after 1 keystroke instead of 25. Note that -c overrides this. \
+
+\f2 -V, --version
+\f4 \
+Show the current version number and exit. \
+
+\f2 -W, --wordbounds
+\f4 \
+Detect word boundaries more accurately by treating punctuation characters as parts of words. \
+
+\f2 -Y <str>, --syntax=<str>
+\f4 \
+Specify a specific syntax highlighting from the nanorc to use, if available. See See {\field{\*\fldinst{HYPERLINK "https://www.nano-editor.org/dist/v2.2/nano.html#Nanorc-Files"}}{\fldrslt \cf17 \ul \ulc17 Nanorc Files}}, for more info. \
+
+\f2 -c, --const
+\f4 \
+Constantly display the cursor position and line number on the statusbar. Note that this overrides -U. \
+
+\f2 -d, --rebinddelete
+\f4 \
+Interpret the Delete key differently so that both Backspace and Delete work properly. You should only need to use this option if Backspace acts like Delete on your system. \
+
+\f2 -h, --help
+\f4 \
+Show a summary of command line options and exit. \
+
+\f2 -i, --autoindent
+\f4 \
+Automatically indent new lines to the same number of spaces and tabs as the previous line. \
+
+\f2 -k, --cut
+\f4 \
+Cut from the current cursor position to the end of the current line. \
+
+\f2 -l, --nofollow
+\f4 \
+When writing files, if the given file is a symbolic link, it is removed and a new file is created. \
+
+\f2 -m, --mouse
+\f4 \
+Enable mouse support, if available for your system. When enabled, mouse clicks can be used to place the cursor, set the mark (with a double click), and execute shortcuts. The mouse will work in the X Window System, and on the console when gpm is running. \
+
+\f2 -o <dir>, --operatingdir=<dir>
+\f4 \
+Set operating directory. Makes 
+\f2 nano
+\f4  set up something similar to a chroot. \
+
+\f2 -p, --preserve
+\f4 \
+Preserve the ^Q (XON) and ^S (XOFF) sequences so data being sent to the editor can be can be stopped and started. \
+
+\f2 -q, --quiet
+\f4 \
+Do not report errors in the nanorc file and ask them to be acknowledged by pressing Enter at startup. \
+
+\f2 -r <#cols>, --fill=<#cols>
+\f4 \
+Wrap lines at column #cols. If this value is 0 or less, wrapping will occur at the width of the screen less #cols, allowing it to vary along with the width of the screen if the screen is resized. The default value is -8. \
+
+\f2 -s <prog>, --speller=<prog>
+\f4 \
+Invoke the given program as the spell checker. By default, 
+\f2 nano
+\f4  uses the command specified in the SPELL environment variable, or, if SPELL is not set, its own interactive spell checker that requires the 
+\f2 spell
+\f4  program to be installed on your system. \
+
+\f2 -t, --tempfile
+\f4 \
+Don't ask whether or not to save the current contents of the file when exiting, assume yes. This is most useful when using 
+\f2 nano
+\f4  as the composer of a mailer program. \
+
+\f2 -u, --undo
+\f4 \
+Enable experimental generic-purpose undo code. By default, the undo and redo shortcuts are Meta-U and Meta-E, respectively. \
+
+\f2 -v, --view
+\f4 \
+Don't allow the contents of the file to be altered. Note that this option should NOT be used in place of correct file permissions to implement a read-only file. \
+
+\f2 -w, --nowrap
+\f4 \
+Don't wrap long lines at any length. This option overrides any value for -r.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \uc0\u8232 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 -x, --nohelp
+\f4 \
+Expert Mode: don't show the Shortcut Lists at the bottom of the screen. This affects the location of the statusbar as well, as in Expert Mode it is located at the very bottom of the editor.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Note: When accessing the help system, Expert Mode is temporarily disabled to display the help system navigation keys. \uc0\u8232 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 -z, --suspend
+\f4 \
+Enable 
+\f2 nano
+\f4 's suspend ability using the system's suspend keystroke (usually ^Z). \
+
+\f2 -$, --softwrap
+\f4 \
+Enable 'soft wrapping'. 
+\f2 nano
+\f4  will attempt to display the entire contents of a line, even if it is longer than the screen width. Since '$' normally refers to a variable in the Unix shell, you should specify this option last when using other options (e.g. 'nano -wS$') or pass it separately (e.g. 'nano -wS -$'). \
+
+\f2 -a, -b, -e, -f, -g, -j
+\f4 \
+Ignored, for compatibility with Pico.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Accessing the DOM
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+This tutorial will teach you how to access the DOM from JavaScript. Basic knowledge of JavaScript and HTML is assumed. There are five short lessons, followed by one exercise.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 It is highly recommended that you open your browser's JavaScript console now. When stuff doesn't work, there's usually an error printed in the console. The console is your friend.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f5\fs22 \cf18 \cb19 Start Lesson 1 
+\f6 \uc0\u8595 
+\f0\fs24 \cf0 \cb1 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf0 Lesson 1: getElementById\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs24 \cf0 Finding a node on a page is the most fundamental task when working with the DOM from JavaScript. The most useful function is 
+\f2 document.getElementById('elementId'){\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/DOM/document.getElementById"}}{\fldrslt 
+\f0\fs18 \cf17 \super \ul \ulc17 [?]}}
+\f0 . This function takes a string and returns the DOM element with that ID.\
+Here is an image of a star: \'a0 \
+This is the DOM tree for the above image:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf20 <img\cf0  \cf21 id\cf22 =\cf23 "star"\cf0  \cf21 src\cf22 =\cf23 "star_off.gif"\cf20 >\cf0 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf0 Write some JavaScript code below that finds the above image element using 
+\f2 getElementById
+\f0 , then sets the element's 
+\f2 src{\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/DOM/HTMLImageElement"}}{\fldrslt 
+\f0\fs18 \cf17 \super \ul \ulc17 [?]}}
+\f0  property so that the star becomes on. There is a 'star_on.gif' image on this server.\
+// my code that I first typed was this: <link src=\'93{\field{\*\fldinst{HYPERLINK "https://dom-tutorials.appspot.com/static/star_on.gif"}}{\fldrslt 
+\f2 \cf24 https://dom-tutorials.appspot.com/static/star_off.gif}}
+\f2 \cf24 \'94> thinking that I needed to copy the image.  The result was a prompt asking me if I meant to insert \'92star_on\'92.  I thought about it for a minute and then clicked the hint button.  it gave me the source below: \cf0 document.getElementById(\cf25 'star'\cf0 ).src=\cf25 'star_on.gif'\cf0 ;\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb26 \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\fs22 \cf0 \cb19 Execute
+\f0\fs24 \cb1  \'a0 
+\f5\fs22 \cf18 \cb19 See Answer\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Sample solution\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 document\cf22 .\cf0 getElementById\cf22 (\cf25 'star'\cf22 ).\cf0 src \cf22 =\cf0  \cf25 'star_on.gif'\cf22 ;
+\f0 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+CSS SELECTORS\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 document.getElementById(\'93\'94);\
+document.getElementByClass(\'93\'94);\
+document.getElementByTagName(\'93\'94); \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://eloquentjavascript.net/14_event.html"}}{\fldrslt 
+\f7\b\fs52 \cf0 \expnd0\expndtw0\kerning0
+http://eloquentjavascript.net/14_event.html}}
+\f7\b\fs52 \expnd0\expndtw0\kerning0
+\
+Handling Events\kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sa340\partightenfactor0
+
+\b0\fs34 \cf2 \expnd0\expndtw0\kerning0
+You have power over your mind\'97not outside events. Realize this, and you will find strength.\
+\pard\pardeftab720\partightenfactor0
+\cf0 Marcus Aurelius, 
+\i Meditations
+\i0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\fs40 \cf0 Some programs work with direct user input, such as mouse and keyboard interaction. The timing and order of such input can\'92t be predicted in advance. This requires a different approach to control flow than the one we have used so far.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\b\fs46 \cf0 Event handlers\kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\b0\fs40 \cf0 \expnd0\expndtw0\kerning0
+Imagine an interface where the only way to find out whether a key on the keyboard is being pressed is to read the current state of that key. To be able to react to keypresses, you would have to constantly read the key\'92s state so that you\'92d catch it before it\'92s released again. It would be dangerous to perform other time-intensive computations since you might miss a keypress.\
+That is how such input was handled on primitive machines. A step up would be for the hardware or operating system to notice the keypress and put it in a queue. A program can then periodically check the queue for new events and react to what it finds there.\
+Of course, it has to remember to look at the queue, and to do it often, because any time between the key being pressed and the program noticing the event will cause the software to feel unresponsive. This approach is called 
+\i polling
+\i0 . Most programmers avoid it whenever possible.\
+A better mechanism is for the underlying system to give our code a chance to react to events as they occur. Browsers do this by allowing us to register functions as 
+\i handlers
+\i0  for specific events.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f8\fs36 \cf27 <p>\cf0 Click this document to activate the handler.\cf27 </p>\cf0 \
+\cf27 <script>\cf0 \
+  addEventListener(\cf28 "click"\cf0 , \cf29 function\cf0 () \{\
+    console.log(\cf28 "You clicked!"\cf0 );\
+  \});\
+\cf27 </script>\cf0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\f7\fs40 \cf0 The 
+\f8\fs36 addEventListener
+\f7\fs40  function registers its second argument to be called whenever the event described by its first argument occurs.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\b\fs46 \cf0 Events and DOM nodes\kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\b0\fs40 \cf0 \expnd0\expndtw0\kerning0
+Each browser event handler is registered in a context. When you call
+\f8\fs36 addEventListener
+\f7\fs40  as shown previously, you are calling it as a method on the whole window because in the browser the global scope is equivalent to the
+\f8\fs36 window
+\f7\fs40  object. Every DOM element has its own 
+\f8\fs36 addEventListener
+\f7\fs40  method, which allows you to listen specifically on that element.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f8\fs36 \cf27 <button>\cf0 Click me\cf27 </button>\cf0 \
+\cf27 <p>\cf0 No handler here.\cf27 </p>\cf0 \
+\cf27 <script>\cf0 \
+  \cf29 var\cf0  button = document.querySelector(\cf28 "button"\cf0 );\
+  button.addEventListener(\cf28 "click"\cf0 , \cf29 function\cf0 () \{\
+    console.log(\cf28 "Button clicked."\cf0 );\
+  \});\
+\cf27 </script>\cf0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\f7\fs40 \cf0 The example attaches a handler to the button node. Thus, clicks on the button cause that handler to run, whereas clicks on the rest of the document do not.\
+Giving a node an 
+\f8\fs36 onclick
+\f7\fs40  attribute has a similar effect. But a node has only one 
+\f8\fs36 onclick
+\f7\fs40  attribute, so you can register only one handler per node that way. The 
+\f8\fs36 addEventListener
+\f7\fs40  method allows you to add any number of handlers, so you can\'92t accidentally replace a handler that has already been registered.\
+The 
+\f8\fs36 removeEventListener
+\f7\fs40  method, called with arguments similar to as
+\f8\fs36 addEventListener
+\f7\fs40 , removes a handler.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f8\fs36 \cf27 <button>\cf0 Act-once button\cf27 </button>\cf0 \
+\cf27 <script>\cf0 \
+  \cf29 var\cf0  button = document.querySelector(\cf28 "button"\cf0 );\
+  \cf29 function\cf0  once() \{\
+    console.log(\cf28 "Done."\cf0 );\
+    button.removeEventListener(\cf28 "click"\cf0 , once);\
+  \}\
+  button.addEventListener(\cf28 "click"\cf0 , once);\
+\cf27 </script>\cf0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\f7\fs40 \cf0 To be able to unregister a handler function, we give it a name (such as 
+\f8\fs36 once
+\f7\fs40 ) so that we can pass it to both 
+\f8\fs36 addEventListener
+\f7\fs40  and 
+\f8\fs36 removeEventListener
+\f7\fs40 .\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\b\fs46 \cf0 Event objects\kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\b0\fs40 \cf0 \expnd0\expndtw0\kerning0
+Though we have ignored it in the previous examples, event handler functions are passed an argument: the 
+\i event object
+\i0 . This object gives us additional information about the event. For example, if we want to know 
+\i which
+\i0  mouse button was pressed, we can look at the event object\'92s 
+\f8\fs36 which
+\f7\fs40  property.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f8\fs36 \cf27 <button>\cf0 Click me any way you want\cf27 </button>\cf0 \
+\cf27 <script>\cf0 \
+  \cf29 var\cf0  button = document.querySelector(\cf28 "button"\cf0 );\
+  button.addEventListener(\cf28 "mousedown"\cf0 , \cf29 function\cf0 (\cf30 event\cf0 ) \{\
+    \cf29 if\cf0  (\cf31 event\cf0 .which == \cf32 1\cf0 )\
+      console.log(\cf28 "Left button"\cf0 );\
+    \cf29 else\cf0  \cf29 if\cf0  (\cf31 event\cf0 .which == \cf32 2\cf0 )\
+      console.log(\cf28 "Middle button"\cf0 );\
+    \cf29 else\cf0  \cf29 if\cf0  (\cf31 event\cf0 .which == \cf32 3\cf0 )\
+      console.log(\cf28 "Right button"\cf0 );\
+  \});\
+\cf27 </script>\cf0 \
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+
+\f7\fs40 \cf0 The information stored in an event object differs per type of event. We\'92ll discuss various types later in this chapter. The object\'92s 
+\f8\fs36 type
+\f7\fs40  property always holds a string identifying the event (for example 
+\f8\fs36 "click"
+\f7\fs40  or 
+\f8\fs36 "mousedown"
+\f7\fs40 ).\
+\
+Other Sources\
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/jsref/dom_obj_event.asp"}}{\fldrslt \cf0 http://www.w3schools.com/jsref/dom_obj_event.asp}}\
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/js/js_htmldom_eventlistener.asp"}}{\fldrslt \cf0 http://www.w3schools.com/js/js_htmldom_eventlistener.asp}}\
+\pard\pardeftab720\sl580\sa400\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/jsref/met_element_addeventlistener.asp"}}{\fldrslt \cf0 http://www.w3schools.com/jsref/met_element_addeventlistener.asp}}
+\f0\fs24 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+Mario Font site
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.myfontfree.com/super_mario_256-myfontfreecom42f4071.htm"}}{\fldrslt \cf0 http://www.myfontfree.com/super_mario_256-myfontfreecom42f4071.htm}}\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s\
+var str1 = \'931\'94;\
+var num = 12;\
+var isTrue = true;\
+var obj = \{\};\
+var func () func \{\};
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v  \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v  \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v  \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v  \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v  \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v  \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+  \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl575\partightenfactor0
+
+\b\fs50 \cf8 \expnd0\expndtw0\kerning0
+M s
+\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
+\cf0 v\
+}
