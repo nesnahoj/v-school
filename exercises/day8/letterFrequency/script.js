@@ -1,16 +1,16 @@
-var phrase = "slimy smelly solution";
-var i;
-var output = {};
-
-for(i = 0; i < phrase.length; i++) {
-
-    if (output[phrase.charAt(i)]==undefined) {
-output[phrase.charAt(i)]=1;
-} else {
-    output[phrase.charAt(i)] = output[phrase.charAt(i)]+1;
-}
-}
-console.log(output);
+//var phrase = "slimy smelly solution";
+//var i;
+//var output = {};
+//
+//for(i = 0; i < phrase.length; i++) {
+//
+//    if (output[phrase.charAt(i)]==undefined) {
+//output[phrase.charAt(i)]=1;
+//} else {
+//    output[phrase.charAt(i)] = output[phrase.charAt(i)]+1;
+//}
+//}
+//console.log(output);
 
 
 //[object Object] {
@@ -26,3 +26,18 @@ console.log(output);
 //  u: 1,
 //  y: 2
 //}
+
+
+var phrase = ("slimy smelly solution");
+var output = {};
+var i;
+
+for(i = 0; i < phrase.length; i++) {
+    if((output[phrase.charAt(i)]==undefined)) {
+       output[phrase.charAt(i)]=1;
+} else {
+    output[phrase.charAt(i)] =
+        output[phrase.charAt(i)]+1;
+}
+}
+console.log(output);

@@ -19,16 +19,16 @@ Robert Williams
 
 
 
-var phrase = "slimy smelly solution";
-var i;
+var phrase = ("slimy smelly solution");
 var output = {};
+var i;
 
 for(i = 0; i < phrase.length; i++) {
-
-    if (output[phrase.charAt(i)]==undefined) {
-output[phrase.charAt(i)]=1;
+    if((output[phrase.charAt(i)]==undefined)) {
+       output[phrase.charAt(i)]=1;
 } else {
-    output[phrase.charAt(i)] = output[phrase.charAt(i)]+1;
+    output[phrase.charAt(i)] =
+        output[phrase.charAt(i)]+1;
 }
 }
 console.log(output);
@@ -47,3 +47,6 @@ console.log(output);
 //  u: 1,
 //  y: 2
 //}
+
+
+typing the code out a second time helped solidify the placement of certain things even though I'm not sure what they all do it did help speed up coding.  I essentially got through the for loop before I really needed to consult the previous version.

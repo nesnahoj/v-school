@@ -1,0 +1,13 @@
+body {
+    height: 110vh;
+}
+
+#djButton {
+    margin: auto;
+    width: 25vw;
+    height: 25vh;
+    background-color: pink;
+    border-style: ridge;
+    border-color: darkgray;
+    border-width: 5px;
+}

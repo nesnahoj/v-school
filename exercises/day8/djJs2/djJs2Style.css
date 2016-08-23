@@ -1,0 +1,43 @@
+body{
+    
+}
+
+ul {
+    background-color: grey;
+    padding: 3vh;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
+.letter {
+    color: brown;
+}
+
+#box {
+    margin: auto;
+    height: auto;
+    width: 50vw;
+    background-color: mediumpurple;
+    border-style: ridge;
+    border-color: turquoise;
+    border-width: 2vh;
+    padding: 5vh;
+}
