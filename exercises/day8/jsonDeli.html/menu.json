@@ -1,0 +1,115 @@
+[
+  "name": "menu",
+  "data": [ {
+    "name": "Appetizers",
+    "data": [ {
+        "name": "IP Popcorn",
+        "price": "$5.25",
+        "ingredients": ["corn", "butter", "NaCl"],
+        "isInstock": true
+      },
+      {
+        "name": "Computer Chips",
+        "price": "$7.45",
+        "ingredients": ["tortilla chips", "cheddar cheese", "NaCl"],
+        "isInstock": true
+      },
+      {
+        "name": "Screenblind Veggies",
+        "price": "$12.25",
+        "ingredients": ["Assortment of vegetables of your choice"],
+        "isInstock": true
+      }
+    ]
+  ],
+
+    "name": "Cold Sandwiches",
+    "data": [ {
+      "name": "Navbar Nachos",
+      "price": "$17.25",
+      "ingredients": ["tortilla chips", "cheddar cheese", "NaCl"],
+      "isInstock": true,
+    },
+    {
+      "name": "Webie's Waffles",
+      "price": "$27.95",
+      "ingredients": ["tortilla chips", "cheddar cheese", "NaCl"],
+      "isInstock": true,
+    },
+    {
+      "name": "Webie's Waffles",
+        "price": "$27.95",
+        "ingredients": ["tortilla chips", "cheddar cheese", "NaCl"],
+        "isInstock": true,
+      },
+    ],
+  [
+    "name": "Hot Sandwiches",
+    "data": [
+      {
+        "name": "Navbar Nachos",
+        "price": "$17.25",
+        "ingredients": ["tortilla chips", "cheddar cheese", "NaCl"],
+        "isInstock": true,
+      },
+      {
+        "name": "Webie's Waffles",
+        "price": "$27.95",
+        "ingredients": ["tortilla chips", "cheddar cheese", "NaCl"],
+        "isInstock": true,
+      },
+      {
+        "name": "Webie's Waffles",
+        "price": "$27.95",
+        "ingredients": ["tortilla chips", "cheddar cheese", "NaCl"],
+        "isInstock": true,
+      },
+    ]
+  ],
+  [
+    "name": "DOM's Desserts",
+    "data": [
+      {
+        "name": "HTML Brulle",
+        "price": "$27.50",
+        "ingredients": ["Eggs", "Milk", "Flour"],
+        "isInstock": true,
+      },
+      {
+        "name": "Chocolate Code Cookies",
+        "price": "$4.30",
+        "ingredients": ["Cocoa Beans", "Milk", "Flour", "eggs"],
+        "isInstock": true,
+      },
+      {
+        "name": "Webster's Waffle Cones",
+        "price": "$7.95",
+        "ingredients": ["Waffle Cone", "Your Favorite Ice Cream"],
+        "isInstock": false,
+      },
+    ]
+  ],
+  [
+    "name": "Sidebar Sodas",
+    "data": [
+      {
+        "name": "Codex Cola",
+        "price": "$3.25",
+        "ingredients": ["Carbonated Water, High Fructose Corn Syrup, Natural and Artificial Flavorings"],
+        "isInstock": true,
+      },
+      {
+        "name": "Techie Tea",
+        "price": "$4.95",
+        "ingredients": ["Herbal Tea"],
+        "isInstock": true,
+      },
+      {
+        "name": "Webstaurant Water",
+        "price": "$3.00",
+        "ingredients": ["Natural & Artificial fillers and H2O"],
+        "isInstock": true,
+      },
+    ]
+  ],
+}

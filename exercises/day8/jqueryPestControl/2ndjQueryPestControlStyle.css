@@ -1,0 +1,135 @@
+body .headImg {
+    background: url(http://coursework.vschool.io/content/images/2015/07/mario-enemies.png);
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+}
+
+body {
+    font-family: "Super Mario 256"; src: url("http://www.myfontfree.com/data/3/s/Super_Mario_256/SuperMario256.ttf");
+}
+
+header {
+    font-size: 80px;
+    font-family: "Super Mario 256"; src: url("http://www.myfontfree.com/data/3/s/Super_Mario_256/SuperMario256.ttf");
+    color: #eb1f22;
+    text-align: center;
+    padding: 3vh 0 1.5vh 0;
+    background-color: #ffda09;
+}
+
+.Instructions {
+    font-size: 36px;
+    margin-top: 10vh;
+    margin: auto;
+    color: #ffda09;
+    text-align: center;
+    border: 2vh;
+    border-color: #ffda09;
+    background-color: #eb1f22;
+    width: 50%;
+}
+
+.center {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.tally {
+    display: inline-block;
+    width: 40vh;
+    padding: 3vh;
+    margin: 10vh 5vh 20vh 5vh;
+    color: #e6505c;
+    text-align: center;
+    font-size: 2.5vh;
+    border: 1vh;
+    border-style: ridge;
+    border-color: #3ab2c2;
+}
+
+.input [type=number] {
+    text-align: center;
+    background-color: #f6b72b;
+    border-color: #3d98d1;
+    border-style: ridge;
+}
+
+#goomba {
+    image-orientation: center;
+    padding: 3vh;
+    border: 1vh;
+    border-style: ridge;
+    border-color: #3ab2c2;
+    width: 10vh;
+    height: 10vh;
+    background-color: white;
+}
+
+#bobOmbs {
+    padding: 3vh;
+    width: 10vh;
+    height: 10vh;
+    border: 1vh;
+    border-style: ridge;
+    border-color: #3ab2c2;
+    background-color: white;
+}
+
+#cheepCheeps {
+    padding: 3vh;
+    width: 10vh;
+    height: 10vh;
+    border: 1vh;
+    border-style: ridge;
+    border-color: #3ab2c2;
+    background-color: white;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.footer {
+    background-color: #ffda09;
+    border-color: #127c22;
+    border-style: groove;
+    border-width: 2vh;
+    color: #127c22;
+    text-align: center;
+}
+
+.footer h1 {
+    text-align: center;
+}
+
+.payment {
+    display: inline-block;
+    text-align: center;
+    float: left;
+    width: 30%;
+    margin: auto;
+}
+
+.cards {
+    display: inline-block;
+    text-align: center;
+    float: right;
+    width: 30%;
+    margin: auto;
+}
+
+.online {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+}
+
+.empty {
+    padding: 3vh;
+}

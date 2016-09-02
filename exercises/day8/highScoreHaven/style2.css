@@ -1,0 +1,204 @@
+body {
+}
+
+.image {
+  background-image: url("http://www.wall321.com/thumbnails/detail/20120304/clouds%20planets%20skyscrapers%201920x1200%20wallpaper_www.wall321.com_32.jpg");
+  background-size: cover;
+  filter: blur(10px);
+    -webkit-filter: blur(10px);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar {
+  background-color: royalblue;
+  height: 75px;
+  color: white;
+  width: 100%;
+  border-color: royalblue;
+  border-radius: 0;
+}
+
+.wrapper {
+  margin-top: 75px;
+  padding-bottom: 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+ul {
+  display: inline-block;
+  font-family: fantasy;
+  color: white;
+  float: right;
+  font-size: 22px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.brand {
+  color: white;
+  font-size: 48px;
+  text-align: left;
+}
+
+#spock {
+  line-height: 75px;
+}
+
+nav a {
+  margin: 9px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#high:hover {
+  color: white;
+}
+
+nav i {
+  float: left;
+  padding-left: 20px;
+  padding-top: 9px;
+}
+
+.brand .navbar-brand {
+  color: white;
+  font-size: 24px;
+}
+
+a {
+  color: white;
+}
+
+
+.dots {
+  font-size: 18px;
+  color: white;
+}
+
+.icon {
+  font-size: 48px;
+}
+
+.container-fluid {
+  color: white;
+  text-shadow: -2px -2px black;
+  font-family: fantasy;
+}
+
+.col-md-12 {
+
+}
+
+#margin {
+}
+
+.name {
+  color: black;
+  font-family: fantasy;
+  padding-left: 35px;
+  text-align: center;
+}
+
+.firstName {
+}
+
+h2 {
+  color: white;
+  text-shadow: -2px -2px black;
+  font-family: fantasy;
+}
+
+#first {
+}
+
+input {
+  margin-left: 20px;
+}
+
+.lastName {
+}
+
+#last {
+}
+
+.gameName {
+}
+
+#game {
+}
+
+.dateField {
+}
+
+#date {
+  padding-left: 7px;
+  text-align: center;
+}
+
+.scoreField {
+}
+
+#score {
+}
+
+.trashTalk {
+  color: white;
+  text-shadow: -2px -2px black;
+  font-family: fantasy;
+}
+
+.checkbox {
+  padding-left: 56px;
+}
+
+#checkbox {
+}
+
+#bttn {
+  color: black;
+  background-color: lightblue;
+  font-family: fantasy;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding: 10px 20px 10px 20px;
+}
+
+.row {
+}
+
+.logBook {
+  color: white;
+  font-family:fantasy;
+  text-align: center;
+
+}
+
+h1 {
+  padding-top: 13px;
+}
+
+.line {
+  height: 7px;
+  width: 100%;
+  background-color: lightblue;
+  border-radius: 3px;
+}
+
+footer {
+  background-color: royalblue;
+  height: 75px;
+  color: white;
+}

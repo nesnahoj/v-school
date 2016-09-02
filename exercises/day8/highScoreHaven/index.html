@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My High Score Haven</title>
+</head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+<body>
+  <div class="container-fluid">
+    <!-- <img src="http://www.ilikewallpaper.net/ipad-air-wallpapers/download/10962/Rays-Color-Black-Background-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg"> -->
+      <div class="firstName">
+        <h2>Who are you?</h2>
+        <input type = "text" id="firstName" placeholder="Type your first name!">
+      </div>
+      <div class="lastName">
+        <h2>What's your last name?</h2>
+        <input type = "text" id="lastName" placeholder="Enter your last name!" />
+      </div>
+
+    <div class="game">
+      <h2>Which game did you play?</h2>
+      <input type = "text" id="game" placeholder="Type in the name of the game.">
+    </div>
+    <div class="date">
+      <h2>When did you play it?</h2>
+      <input type = "date" id="date" placeholder="mm/dd/yyyy">
+    </div>
+        <div class="score">
+          <h2>Type your score then click the 'Submit' button.</h2>
+          <input type = "number" id="score" placeholder="Enter your score!">
+        </div>
+          <input type="checkbox" id="checkbox">Check if you want to randomly trash talk your entry.<br>
+          <checkbox></checkbox>
+        <div class="entry">
+          <button id="submit">Submit</button>
+        </div>
+      </div>
+      <div id="log">
+        <h3>My High Score Haven</h3>
+        <div id="parent">
+        </div>
+    </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

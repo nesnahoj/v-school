@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2nd jQuery Mario Pest Control Baddies Tally</title>
+    <link rel="stylesheet" type="text/css" href="./2ndjQueryPestControlStyle.css">
+</head>
+
+    <body>
+        <div class="headImg"></div>
+
+<!--HEADER - HEADER-->
+    <header>It'sa Mario's Pest Control</header>
+        <div class="center">
+            <h3 class="Instructions">Instructions - Enter the number of baddies in the box above the baddie, then click the image of the baddie you caught!</h3>
+
+<!--Goombas-->
+            <div class="tally">
+                <p class="input"><input type="number" id="goombasCaught" placeholder="# Goombas Caught?"></p>
+                <p><img id="goomba" src="http://www.mariowiki.com/images/thumb/0/00/Goomba2_NSMB2.png/451px-Goomba2_NSMB2.png"></p>
+                <p>Goombas caught to date - <span id="totalGoombas">12</span></p>
+                <p>Price per pest - 5 coins</p>
+                <p>Total price $<span id="goombasCharge"></span> coins</p>
+            </div>
+
+<!--Bob-Ombs-->
+            <div class="tally">
+                <p class="input"><input type="number" id="bobOmbsCaught" placeholder="# Bob-Ombs Caught?"></p>
+                <p><img id="bobOmbs" src="http://vignette2.wikia.nocookie.net/mariokart/images/1/16/Bob-ombMK8.png/revision/latest?cb=20140520034125"></p>
+                <p>Bob-Ombs caught to date - <span id="totalBobOmbs">8</span></p>
+                <p>Price per pest - 7 coins</p>
+                <p>Total price $<span id="bobOmbsPrice"></span> coins</p>
+            </div>
+
+<!--Cheep-Cheeps-->
+            <div class="tally">
+                <p class="input"><input type="number" id="cheepCheepsCaught" placeholder="# Cheep-Cheeps caught?"></p>
+                <p><img id="cheepCheeps" src="http://www.mariowiki.com/images/thumb/6/63/CheepCheepNSMBU.png/200px-CheepCheepNSMBU.png"></p>
+                <p>Cheep-cheeps caught to date - <span id="totalCheepCheeps">5</span></p>
+                <p>Price per pest - 11 coins</p>
+                <p>Total price $<span id="cheepCheepsPrice"></span> coins</p>
+            </div>
+        </div>
+
+
+<!--FOOTER - FOOTER-->
+        <div class="footer">
+            <h1>It'sa Mario's Pest Control</h1>
+            <div>
+                <h3>7-14 Mushroom Kingdom, MarioLand 1983 or via phone at 1-983-007-0014</h3>
+
+            </div>
+
+            <div class="payment">
+                <h2>send payment via Mailtoad to:</h2>
+                <p>street address listed above.</p>
+            </div>
+            <div class="cards">
+                <h2>We accept:</h2>
+                <p>MarioCard, Toad and</p>
+                <p>E.Gadd payment systems.</p>
+            </div>
+            <div class="online">
+                <div class="empty"></div>
+               <h2>contact or visit us online:</h2>
+                <p>www.mariopestcontrol.jp</p>
+                <p>t-mail us at: mariospestcontrol@mario.jp</p>
+            </div>
+        </div>
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="./2ndjQueryPestControlScript.js"></script>
+
+</body>
+
+</html>

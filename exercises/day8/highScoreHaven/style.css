@@ -1,0 +1,114 @@
+body {
+
+}
+
+.container-fluid {
+  background-image: url("http://www.ilikewallpaper.net/ipad-air-wallpapers/download/10962/Rays-Color-Black-Background-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg");
+  background-size: cover;
+  color: grey;
+  width: 100%;
+  padding-left: 3vw;
+  margin: auto;
+  border-style: double;
+  border-color: darkgreen;
+  border: 3px;
+  border-radius: 10px
+}
+
+.firstName {
+  color: grey;
+  height: auto;
+  width: 45%;
+  border: 2px;
+  border-color: darkgreen;
+  border-style: inset;
+  border-radius: 10px;
+}
+
+.lastName {
+  color: grey;
+  height: auto;
+  width: 45%;
+  border: 2px;
+  border-color: darkgreen;
+  border-style: inset;
+  border-radius: 10px;
+}
+
+#submit {
+  height: 50px;
+  width: 5%;
+  border: 4px;
+  background-color: grey;
+  border-color: darkgreen;
+  border-style: ;
+  border-radius: 10px;
+}
+
+.game {
+  border: 2px;
+  border-color: darkgreen;
+  border-style: inset;
+  border-radius: 10px;
+}
+
+.date {
+  color: grey;
+  border: 2px;
+  border-color: darkgreen;
+  border-style: inset;
+  border-radius: 10px;
+}
+
+.dateSelect {
+  color: black;
+}
+
+.score #score {
+  border: 2px;
+  border-color: darkgreen;
+  border-style: inset;
+  border-radius: 10px;
+}
+
+.entry #submit {
+  height: 30px;
+  border: 2px;
+  border-color: darkgreen;
+  border-style: solid;
+  border-radius: 15px;
+}
+
+#log {
+  color: grey;
+  background-color: violet;
+  border-style: ridge;
+  border-color: blueviolet;
+
+}
+
+#parent h4 {
+  color: grey;
+  display:inline-block;
+  background-color: chartreuse;
+  border: 3px;
+  border-style: ridge;
+  border-color: darkgrey;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: blue;
+}
+
+#parent p {
+  color: grey;
+  display:inline-block;
+  background-color: chartreuse;
+  border: 3px;
+  border-style: ridge;
+  border-color: darkgrey;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: blue;
+}
