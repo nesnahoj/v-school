@@ -12,72 +12,65 @@
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs" aria-expanded="false">
-          <span class="sr-only">Toggle Navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <div class="brand">
-          <nav id="spock">
-            <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
-            <a class="navbar-brand" id="high">HighScore Haven</a>
-          </nav>
-        </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs" aria-expanded="false">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="brand">
+        <nav id="spock">
+          <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+          <a class="navbar-brand" id="high">HighScore Haven</a>
+        </nav>
       </div>
-        <div class="collapse navbar-collapse navbar-right" id="bs">
-          <div id="margin">
-            <ul class="nav navbar-nav">
-            <ul>
-          </div>
-              <a href="#">Contact Us<span class="sr-only">(current)</span>
-              </a>
-            </ul>
-            <ul class="dots">
-              <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-            </ul>
-            <ul>
-              <a href="#">Support<span class="sr-only">(current)</span>
-              </a>
-            </ul>
-            <ul class="dots">
-              <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-            </ul>
-            <ul>
-              <a href="#">Home<span class="sr-only">(current)</span>
-              </a>
-            </ul>
-          </ul>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="bs">
+      <div id="margin">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Contact Us<span class="sr-only">(current)</span></a></li>
+          <li class="dots">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+          </li>
+          <li><a href="#">Support<span class="sr-only">(current)</span></a></li>
+          <li class="dots">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+          </li>
+          <li><a href="#">Home<span class="sr-only">(current)</span></a></li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
     <div class="image"></div>
     <div class="wrapper">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="name">
-            <div class="firstName">
-              <h2>What's your first name?</h2>
-              <input type="text" id="first" placeholder="Type your first name." />
-            </div>
-            <div class="lastName">
-              <h2>Now your last name?</h2>
-              <input type="text" id="last" placeholder="Type your last name here." />
-            </div>
-            <div class="gameName">
-              <h2>What game was it?</h2>
-              <input type="text" id="game" placeholder="Type the name of the game here." />
-            </div>
-            <div class="dateField">
-              <h2>When did you play it?</h2>
-              <input type="date" id="date" />
-            </div>
-            <div class="scoreField">
-              <h2>What was your score?"</h2>
-              <input type="number" id="score" placeholder="Enter your score here." />
-            </div>
-            <div class="trashTalk">
-              <h3>click in the checkbox if you want random trash talk about your entry.</h3>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="name">
+              <div class="firstName">
+                <h2>What's your first name?</h2>
+                <input type="text" id="first" placeholder="Type your first name." />
+              </div>
+              <div class="lastName">
+                <h2>Now your last name?</h2>
+                <input type="text" id="last" placeholder="Type your last name here." />
+              </div>
+              <div class="gameDateScore">
+                <div class="gameName">
+                  <h2>What game was it?</h2>
+                  <input type="text" id="game" placeholder="Type the name of the game here." />
+                </div>
+                <div class="scoreField">
+                  <h2>What was your score?"</h2>
+                  <input type="number" id="score" placeholder="Enter your score here." />
+                </div>
+                <div class="dateField">
+                  <h2>When did you play it?</h2>
+                  <input type="date" id="date" />
+                </div>
+              </div>
+              <div class="trashTalk">
+                <h3>click in the checkbox if you want random trash talk about your entry.</h3>
               <div class="checkbox">
                 <input type="checkbox" id="checkbox" />
               </div>
@@ -92,31 +85,33 @@
             <h1>THE HAVEN OF HIGH SCORES</h1>
             <div class="line"></div>
             <div id="parent">
+              <!--Field where entry info is appended-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="list">
+              <ul class="foot">
+                <li><a href="#"><span>History</span></a></li>
+                <li class="dots">
+                  <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                </li>
+                <li><a href="#"><span>Who We Are</span></a></li>
+                <li class="dots">
+                  <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                </li>
+                <li><a href="#"><span>About us</span></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-      <footer>
-        <div class="col-md-12">
-          <div class="list">
-            <ul>
-              <ul href="#">History</ul>
-              <ul class="dots">
-                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-              </ul>
-              <ul href="#">Who We Are</ul>
-              <ul class="dots">
-                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-              </ul>
-              <ul href="#">About us</ul>
-            </ul>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="./script2.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="./script2.js"></script>
 </body>
 </html>

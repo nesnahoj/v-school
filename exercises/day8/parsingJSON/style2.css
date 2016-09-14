@@ -1,0 +1,57 @@
+/*background-image options*/
+/*https://i.ytimg.com/vi/17c3btORpmE/maxresdefault.jpg*/
+/*https://cdn0.vox-cdn.com/thumbor/ie_REzAR9GuOcmOD03TGyaVL9Gk=/0x266:1024x949/1280x854/cdn0.vox-cdn.com/uploads/chorus_image/image/48942277/N3DS_PokemonSuperMysteryDungeon_MainIllustration_png_jpgcopy.0.0.jpg*/
+/*https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7aWG1XJi1bBrL_yAC70G0hTgfGZSNXA6aOOwAiY_zuy3Oeeqp*/
+html {
+
+}
+
+body {
+
+}
+
+.navbar-default {
+  background-color: steelblue !important;
+  border-color: gold !important;
+}
+
+.wrapper {
+  background-image: url("https://cdn0.vox-cdn.com/thumbor/ie_REzAR9GuOcmOD03TGyaVL9Gk=/0x266:1024x949/1280x854/cdn0.vox-cdn.com/uploads/chorus_image/image/48942277/N3DS_PokemonSuperMysteryDungeon_MainIllustration_png_jpgcopy.0.0.jpg");
+  height: 100vh;
+}
+
+/*.split-list ul{
+  float: left;
+  margin-left: 1em;
+}
+.split-list li{
+  padding-right: 2em;
+  line-height: 1.5em;
+  @include font-size(12px);
+ }*/
+
+#btn {
+  margin-top: 70px;
+  margin-left: 575px;
+  background-color: gold;
+  border-color: steelblue !important;
+  border-width: 5px !important;
+  border-radius: 10px;
+  color: steelblue;
+}
+
+ul span .names {
+  background-color: lightblue;
+  margin: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+ul {
+  color: black;
+  text-shadow: -1px -1px black;
+}
+
+ul #myList {
+
+}

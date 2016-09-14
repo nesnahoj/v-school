@@ -1,0 +1,43 @@
+html {
+
+}
+
+.navbar {
+
+}
+nav .yamm {
+
+  color: white;
+}
+
+nav .collapse {
+
+  background-color: darkslategrey;
+  color: white;
+}
+
+.nav navbar-nav {
+
+}
+
+body {
+
+  background-color: lightblue;
+
+}
+
+.parent {
+  margin-top: 100px;
+}
+
+#b4Btn {
+  background-color: lightgreen;
+}
+
+#bttn1 {
+  background-color: lightgreen;
+}
+
+#bttn2 {
+  background-color: lightgreen;
+}

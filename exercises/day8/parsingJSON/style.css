@@ -1,0 +1,38 @@
+/*background-image options*/
+/*https://i.ytimg.com/vi/17c3btORpmE/maxresdefault.jpg*/
+/*https://cdn0.vox-cdn.com/thumbor/ie_REzAR9GuOcmOD03TGyaVL9Gk=/0x266:1024x949/1280x854/cdn0.vox-cdn.com/uploads/chorus_image/image/48942277/N3DS_PokemonSuperMysteryDungeon_MainIllustration_png_jpgcopy.0.0.jpg*/
+/*https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7aWG1XJi1bBrL_yAC70G0hTgfGZSNXA6aOOwAiY_zuy3Oeeqp*/
+html {
+
+}
+
+body {
+
+}
+
+.navbar-default {
+  background-color: steelblue !important;
+  border-color: gold !important;
+}
+
+.wrapper {
+  background-image: url("https://cdn0.vox-cdn.com/thumbor/ie_REzAR9GuOcmOD03TGyaVL9Gk=/0x266:1024x949/1280x854/cdn0.vox-cdn.com/uploads/chorus_image/image/48942277/N3DS_PokemonSuperMysteryDungeon_MainIllustration_png_jpgcopy.0.0.jpg");
+  height: 100vh;
+}
+
+#btn {
+  margin-top: 70px;
+  margin-left: 575px;
+  background-color: gold;
+  border-color: steelblue;
+  border-radius: 10px;
+  color: gold;
+}
+
+ul {
+
+}
+
+ul #myList {
+
+}
