@@ -1,0 +1,17 @@
+{
+  "name": "firstkarmatest",
+  "version": "1.0.0",
+  "description": "first karma test with fibonacci script and spec code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Johansen",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-core": "^2.5.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2"
+  }
+}

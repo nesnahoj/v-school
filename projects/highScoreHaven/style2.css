@@ -1,0 +1,179 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 75px;
+}
+
+.navbar {
+  background-color: royalblue;
+  height: 75px;
+  color: white;
+  width: 100%;
+  border-color: royalblue;
+  border-radius: 0;
+  padding-right: 20px;
+}
+
+.brand {
+  color: white;
+  font-size: 48px;
+  text-align: left;
+}
+
+#spock {
+  line-height: 75px;
+}
+
+.nav li {
+  display: inline-block;
+  font-family: fantasy;
+  color: white;
+  float: right;
+  font-size: 22px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+nav a {
+  margin: 7px;
+}
+
+nav a:hover {
+  /*text-decoration: none;*/
+  color: white;
+}
+
+#high:hover {
+  color: white;
+}
+
+nav i {
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.brand .navbar-brand {
+  color: white;
+  font-size: 24px;
+}
+
+a {
+  color: white;
+}
+
+nav .dots {
+  font-size: 18px;
+  color: white;
+}
+
+.image {
+  background-image: url("http://www.wall321.com/thumbnails/detail/20120304/clouds%20planets%20skyscrapers%201920x1200%20wallpaper_www.wall321.com_32.jpg");
+  background-size: cover;
+  filter: blur(10px);
+    -webkit-filter: blur(10px);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.wrapper {
+  margin-top: 75px;
+  padding-bottom: 65px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.container-fluid {
+  color: white;
+  text-shadow: -2px -2px black;
+  font-family: fantasy;
+}
+
+.name {
+  color: black;
+  font-family: fantasy;
+  padding-left: 35px;
+  text-align: center;
+}
+
+.firstName {
+}
+
+h2 {
+  color: white;
+  text-shadow: -2px -2px black;
+  font-family: fantasy;
+}
+
+input {
+  margin-left: 20px;
+}
+
+#date {
+  padding-left: 7px;
+  text-align: center;
+}
+.gameDateScore {
+  display: inline;
+}
+
+.trashTalk {
+  color: white;
+  text-shadow: -2px -2px black;
+  font-family: fantasy;
+}
+
+.checkbox {
+  padding-left: 56px;
+}
+
+#bttn {
+  color: black;
+  background-color: lightblue;
+  font-family: fantasy;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding: 10px 20px 10px 20px;
+}
+
+.logBook {
+  color: white;
+  font-family:fantasy;
+  text-align: center;
+}
+
+h1 {
+  padding-top: 13px;
+}
+
+.line {
+  height: 7px;
+  width: 100%;
+  background-color: lightblue;
+  border-radius: 3px;
+}
+
+#parent {
+  display: inline-block;
+  color: white;
+  font-family: fantasy;
+}
+
+.name-h4 {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+//

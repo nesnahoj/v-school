@@ -1,0 +1,119 @@
+.navbar {
+  /*margin-left: -15px;*/
+  padding-top: 5px;
+  padding-left: 50px;
+  height: 75px;
+  width: 100%;
+  color: #fece00;
+  background-color: #007bf4;
+  border-color: #f40b01;
+  border-width: 5px;
+  border-radius: 3px !important;
+}
+
+.navbar-toggler {
+  margin-top: 18px;
+  margin-right: 15px;
+  float: right;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 2.4em;
+  font-family: fantasy;
+  padding-bottom: 15px !important;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+.col-md-12 {
+  height: 75px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("http://static.trustedreviews.com/94/000039fd5/d8ed_orh500w750/pokemon-go-teams.jpg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover !important;
+  overflow-x: scroll;
+}
+
+#getList {
+  margin: 121px;
+  padding: 15px;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: fantasy;
+  color: #007bf4;
+  background-color: #fece00;
+  border-width: .25em;
+  border-color: #f40b01;
+  border-style: ridge;
+}
+
+.loading {
+  background-color: #007bf4;
+  width: 8.5em;
+  height: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -165px;
+  display: none;
+}
+
+.split-list ul {
+  margin-top: 2em;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 2em;
+  float: left;
+  width: 13em;
+  height: 7em;
+  padding-top: 2.25em;
+  font-family: fantasy;
+  font-size: 2em;
+  color: #007bf4;
+  background-color: #fece00;
+  border-width: .4em;
+  border-color: #f40b01;
+  border-style: ridge;
+  list-style-type: none;
+}
+
+.split-list li {
+  border-width: .3em;
+  margin: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  line-height: 1.5em;
+  @include font-size(18px);
+ }
+
+.remove {
+  background-color: #fece00;
+  border-color: #007bf4;
+  border-width: .3em;
+  border-style: ridge;
+  color: #f40b01;
+}
+
+#output {
+}
+
+#output li {
+  display: inline;
+  margin: 50px;
+  width: 75px;
+  height: 10px;
+  background-color: lightblue;
+  opacity: .6;
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
