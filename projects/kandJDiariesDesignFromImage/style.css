@@ -1,0 +1,267 @@
+
+body {
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+    background-color: #dfe0db;
+}
+nav {
+  width: 100%;
+  background-color: white !important;
+  height: 100px !important;
+  padding-top: 22px;
+}
+
+@media max-width
+
+.navbar.navbar-default {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 15px
+}
+
+ul .nav {}
+
+li .dropdown {
+  float: right;
+}
+
+#serves .container-fluid {
+  width: 100%;
+}
+
+.logo {
+  width: 18em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.main-header h1 {
+  width: 100%;
+  margin-top: .5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .5em;
+  font-family: brown;
+  font-size: 3.75em;
+  font-weight: lighter;
+}
+.copper-text-wrapper {
+  font-size: 36px;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  height: 4em;
+  padding-top: 2em;
+  padding-bottom: .3em;
+  background: linear-gradient(#F8BDA0, #B03326);
+  -webkit-linear-gradient(#F8BDA0, #B03326);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 36px;
+  color: black;
+  /*background:
+  -webkit-linear-gradient(#F8BDA0, #B03326);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+
+.line-wrapper {
+  margin-top: 1em;
+  height: .05em;
+  padding-top: .3em;
+  padding-bottom: 2em;
+}
+
+.slogan-wrapper {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.line {
+  height: .15em;
+  width: 15em;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(#F8BDA0, #B03326);
+}
+
+.bottles {
+  display: block;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+}
+
+.sugar {
+  letter-spacing: .25em;
+  text-align: center;
+  line-height: 2em;
+  float: right;
+  padding-left: 625px;
+  padding-top: 15em;
+  margin: 0;
+}
+
+.calories {
+  letter-spacing: .25em;
+  text-align: center;
+  line-height: 2em;
+  float: left;
+  padding-right: 625px;
+  padding-top: 15em;
+  margin: 0;
+}
+
+.spiritsWrapper {
+    margin-bottom: 300px;
+}
+
+.spice94 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  margin-right: 5em;
+  float: right;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  background-color: white;
+  height: auto;
+  width: 30em;
+}
+
+.garden108 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  margin-left: 5em;
+  float: left;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  background-color: white;
+  height: auto;
+  width: 30em;
+}
+
+.fa {
+  font-size: 1.5em;
+  vertical-align: text-top;
+}
+
+.big {
+  font-size: 30px;
+}
+
+.super {
+  vertical-align: center;
+}
+
+.grey-line-wrapper {
+  margin-top: 1em;
+  height: .05em;
+  padding-top: .3em;
+  padding-bottom: 2em;
+}
+
+.grey-line {
+  height: .15em;
+  width: 15em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servesWrapper {
+  margin-top: 400px;
+  margin-bottom: 400px;
+}
+
+.serves p {
+  font-style: italic;
+  font: brown;
+}
+
+.btn {
+  margin-top: 2em;
+}
+
+.infoLinks {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.spice94InfoBtn {
+  display: inline;
+}
+
+#spice94Info {
+  width: auto;
+  height: auto;
+  font-size: 2em;
+  background-color: #dfe0db;
+  transition: color 0.5s ease;
+  color: lightgrey;
+}
+#spice94Info:hover {
+  color: darkslategrey;
+}
+
+.garden108InfoBtn {
+  display: inline;
+}
+
+#garden108Info {
+  width: auto;
+  height: auto;
+  font-size: 2em;
+  background-color: #dfe0db;
+  transition: color 0.5s ease;
+  color:  lightgrey;
+}
+#garden108Info:hover {
+    color: darkslategrey;
+  }
+
+.col-md-6 {
+  margin: 0 !important;
+}
+
+.recipeInfo {
+
+}
+
+.recipeInfo img {
+  /*position: relative;*/
+  width: 60em;
+  height: 70em;
+}
+
+.watermark {
+  position: relative;
+}
+
+.pics {
+  float: right;
+  width: 60em !important;
+  height: 70em !important;
+  background-color: white;
+}
+
+.recipes {
+  position: absolute;
+  float:left;
+  width: 60em !important;
+  height: 70em !important;
+  background-color: white;
+}
+
+.spiceTonicDrink {
+  position: absolute;
+}

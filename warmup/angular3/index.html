@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Angular Intro - My Third Angular Warmup</title>
+</head>
+
+<!-- "__________CSS LINKS__________" -->
+<!--  bootstrap 3.3.7 cdn minified -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!--  Font Awesome 4.6.3 cdn minified -->
+<!--  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">-->
+
+<!--  Local CSS style tag  -->
+<link rel="stylesheet" type="text/css" href="./style.css">
+
+
+<!-- "__________MAIN CONTENT__________" -->
+<body ng-app="myApp">
+  <div ng-controller="controller">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div> <!-- .navbar-header -->
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+         </ul>
+         <form class="navbar-form navbar-left">
+         </form>
+         <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li><a href="#">HISTORY</a></li>
+               <li><a href="#">ABOUT</a></li>
+               <li><a href="#">CONTACT</a></li>
+             </ul> <!-- .dropdown-menu -->
+           </li> <!-- .dropdown -->
+         </ul> <!-- .nav navbar-nav navbar-right -->
+       </div> <!-- .collapse navbar-collapse -->
+      </div> <!-- /.container-fluid -->
+    </nav> <!-- /.navbar navbar-default -->
+  <div class="wrapper"
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="sidebar">
+          </div> <!-- .sidebar -->
+        </div> <!-- .col-md-2 -->
+        <div class="col-md-10 center">
+          <div class="form">
+            <div class="name">
+              <input ng-model="firstName" type="text" placeholder="First Name" class="center"/>
+              <input ng-model="lastName" type="text" placeholder="Last Name" class="center"/>
+            </div>
+
+            <div class="line center">
+            </div> <!-- .line -->
+
+            <div class="houseStreet center">
+              <input ng-model="houseNumber" type="text" placeholder="House Number" class="center"/>
+              <input ng-model="street" type="text" placeholder="Street" class="center"/>
+            </div> <!-- .houseStreet -->
+
+            <div class="line">
+            </div> <!-- .line -->
+
+            <div class="cityStZip">
+              <input ng-model="city" type="text" placeholder="City" class="center"/>
+              <input ng-model="state" type="text"   placeholder="State" class="center"/>
+              <input ng-model="zip" type="text" placeholder="Zip" class="center"/>
+            </div> <!-- .cityStZip -->
+
+            <div class="line">
+            </div> <!-- .line -->
+
+            <div class="phoneEmail">
+              <input ng-model="phone" type="text" placeholder="Phone: (xxx) xxx-xxxx" class="center"/>
+            <div class="email">
+              <input ng-model="email" type="text" placeholder="Email: you@email.com" class="center"/>
+            </div> <!-- .email -->
+            </div> <!-- .phone-email -->
+
+            <div class="line">
+            </div> <!-- .line -->
+          </div> <!-- .form -->
+
+          <div class="btn">
+            <button id="btn" ng-click="change()">click here</button>
+          </div> <!-- .btn -->
+
+          <div class="newLine">
+          </div> <!-- .newLine -->
+
+          <div class="output center">
+            <div class="namebadge center">
+              <div class="nameLine center">
+                <h3 class="center" ng-if="output.name">I'm {{output.name}}</h3>
+              </div> <!-- .nameLine -->
+              <div class="info center">
+                <!-- <h3 ng-if="output.streetNumber">I live at {{output.streetNumber}}</h3> -->
+                <h4 class="center" ng-if="output.cityStZip">I am from {{output.cityStZip}}</h4>
+                <h4 class="center" ng-if="output.phone">My number is  {{output.phone}}</h4>
+                <h4 class="center" ng-if="output.email"> or email me at {{output.email}}</h4>
+              </div> <!-- .info -->
+            </div> <!-- .namebadge -->
+          </div> <!-- .output -->
+        </div> <!-- col-md-12 -->
+      </div> <!-- .row -->
+    </div> <!-- .container-fluid -->
+  </div> <!-- .wrapper -->
+  </div> <!-- .ng-controller -->
+
+
+<!-- "__________SCRIPT LINKS__________" -->
+  <!--  jQuery 2.x minified CDN Script Tag  -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <!-- Angular 1.5.8 minified script tag -->
+  <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+
+  <!-- Bootstrap 3.3.7 Javascript minified CDN Script Tag-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--  Local script tag  -->
+  <script src="./script.js"></script>
+</body>
+</html>
