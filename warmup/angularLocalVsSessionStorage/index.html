@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My Local vs Session Storage</title>
+</head>
+
+<!-- "__________CSS LINKS__________" -->
+<!--  bootstrap 3.3.7 cdn minified -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!--  Font Awesome 4.6.3 cdn minified -->
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<!--  Local CSS style tag  -->
+<link rel="stylesheet" type="text/css" href="./style.css">
+
+
+<!-- "__________MAIN CONTENT__________" -->
+<body ng-app="app">
+  <div ng-controller="controller">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#"><i class="fa fa-level-up" aria-hidden="true"></i>LevelUp</a>
+       </div>
+       <div class="headTitle center">
+         <p class="center">WHAT UGLY THINGS HAVE YOU SEEN?</p>
+       </div>
+       <!-- .navbar-header -->
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+         </ul>
+         <form class="navbar-form navbar-left">
+         </form>
+         <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li><a href="#">HISTORY</a></li>
+               <li><a href="#">ABOUT</a></li>
+               <li><a href="#">CONTACT</a></li>
+             </ul> <!-- .dropdown-menu -->
+           </li> <!-- .dropdown -->
+         </ul> <!-- .nav navbar-nav navbar-right -->
+       </div> <!-- .collapse navbar-collapse -->
+      </div> <!-- /.container-fluid -->
+    </nav> <!-- /.navbar navbar-default -->
+  <div class="wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12 center">
+            <input ng-model="userInput.description" class="userDescription" placeholder="Your Description"/>
+            <input ng-model="userInput.reason" class="userReason" placeholder="What is your reason?"/>
+            <input ng-model="userInput.url" class="userUrl" type="text" placeholder="Paste URL here"/>
+            <button class="center"id="submit" ng-click="new()">Submit</button>
+            <div class="row image-container">
+              <div class="col-md-4 newImage" ng-repeat="image in images">
+                <div class="form">
+                  <div class="image">
+                    <h3 class="description">"Description: " {{image.description}}</h3>
+                    <img ng-src="{{image.url}}"/>
+                    <h4 class="reason">"Why is it ugly: " {{image.reason}}</h4>
+                  </div> <!-- .image -->
+                </div> <!-- .form -->
+              </div> <!-- .col-md-4 newImage-->
+            </div> <!-- .row -->
+          </div> <!-- .col-md-12 -->
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .wrapper -->
+  </div> <!-- .ng-controller -->
+
+
+<!-- "__________SCRIPT LINKS__________" -->
+  <!--  jQuery 2.x minified CDN Script Tag  -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <!-- Angular 1.5.8 minified script tag -->
+  <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+
+  <!-- Bootstrap 3.3.7 Javascript minified CDN Script Tag-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--  Local script tag  -->
+  <script src="./script.js"></script>
+</body>
+</html>

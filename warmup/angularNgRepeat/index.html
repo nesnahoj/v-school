@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Repeat</title>
+</head>
+<body ng-app="app">
+  <div ng-controller="controller">
+    <div class="input-box">
+      <label>Name</label>
+      <input ng-model="userInput.name" placeholder="Your Name?">
+      <label>Age</label>
+      <input ng-model="userInput.age" placeholder="Your Age?">
+    </div> <!-- input-box -->
+    <button ng-click="add()">Add</button>
+    <div ng-repeat="person in people">
+      <h4>{{person.name}}</h4>
+      <p>{{person.age}}</p>
+    </div> <!--ng-repeat -->
+  </div> <!-- ng-controller -->
+
+  <!-- Angular 1.5.8 CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+  <!-- Local Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>

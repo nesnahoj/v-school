@@ -4342,10 +4342,20 @@ $("#btn").on("click", function() \{\
 \pard\pardeftab720\sl575\partightenfactor0
 
 \b\fs50 \cf8 \expnd0\expndtw0\kerning0
-M s
+First Repeat
 \b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\qj\partightenfactor0
-\cf0 v\
+\cf0 var find = function(str) \{\
+  for(var x = 1; x < str.length; x++) \{\
+    if(str[x] != str[x-1]) \{\
+      return str[x];\
+    \}\
+  \}\
+  return "not found!";\
+\};\
+console.log(find("ggggggggkxljfvlsjkfg"));\
+\
+\
   \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0

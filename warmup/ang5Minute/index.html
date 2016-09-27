@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular 5Minute</title>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="ctrl">
+    <div class="box">
+      <input ng-model="userInput.name" placeholder="Type your name here."/>
+      <button ng-click="add()">Click Here</button>
+      <h4 ng-if="show">Hello, I am {{userInput.name}}.</h4>
+    </div>
+    <div class="box2">
+      <input ng-model="userInput.cityBorn" placeholder="Where where you born?"/>
+      <button ng-click="cityBorn()">Submit</button>
+      <h3 ng-if = "showCity">{{userInput.cityBorn}}</h3>
+    </div>
+  </div> <!-- ng-controller -->
+
+  <!-- Angular 1.5.8 CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+  <!-- Local Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>

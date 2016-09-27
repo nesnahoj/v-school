@@ -9,16 +9,40 @@ body {
 nav {
   width: 100%;
   background-color: white !important;
-  height: 100px !important;
+  height: 120px !important;
   padding-top: 22px;
 }
 
-@media max-width
+/*@media max-width
 
 .navbar.navbar-default {
   width: 100%;
   margin-right: 0;
-  margin-left: 15px
+  margin-left: 15px;
+}*/
+
+.navbar-header {
+  text-align: center !important;
+  width: 100%;
+}
+
+.header {
+  height: 30px;
+  line-height: 30px;
+  margin-left: auto  !important;
+  margin-right: auto !important;
+  text-align: center;
+  width: 100%;
+}
+
+.header li {
+  list-style: none;
+  text-align: center;
+  display: inline-block;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: black;
+  font-size: 24px;
 }
 
 ul .nav {}
@@ -32,7 +56,9 @@ li .dropdown {
 }
 
 .logo {
-  width: 18em;
+  width: 22em;
+  height: 15em;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -206,12 +232,12 @@ h2 {
   height: auto;
   font-size: 2em;
   background-color: #dfe0db;
-  transition: color 0.5s ease;
-  color: lightgrey;
-}
-#spice94Info:hover {
+  /*transition: color 0.5s ease;*/
   color: darkslategrey;
 }
+/*#spice94Info:hover {
+  color: darkslategrey;
+}*/
 
 .garden108InfoBtn {
   display: inline;
@@ -222,12 +248,12 @@ h2 {
   height: auto;
   font-size: 2em;
   background-color: #dfe0db;
-  transition: color 0.5s ease;
-  color:  lightgrey;
+  /*transition: color 0.5s ease;*/
+  color: grey;
 }
-#garden108Info:hover {
+/*#garden108Info:hover {
     color: darkslategrey;
-  }
+  }*/
 
 .col-md-6 {
   margin: 0 !important;

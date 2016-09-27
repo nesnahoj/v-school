@@ -1,0 +1,101 @@
+html {}
+
+nav {
+  width: 100%;
+  background-color: lightgrey !important;
+  height: 75px;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+/*brand image and name*/
+.navbar-header a {
+  color: white !important;
+  font-size: 24px;
+  font-family: fantasy;
+}
+
+.navbar-header i {
+  color: white !important;
+}
+
+.headTitle {
+  color: white !important;
+  padding-top: 15px;
+  font-size: 24px;
+  font-family: fantasy;
+  text-decoration-line: underline;
+}
+
+.dropdown-toggle {
+  color: white !important;
+}
+
+.navbar.navbar-default {
+  width: 100%;
+  margin-right: 0;
+  border-color: darkslategrey;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.navbar-collapse {
+  padding-right: -15px;
+  padding-left: -15px;
+}
+
+ul .nav {}
+
+li .dropdown {
+  float: right;
+}
+
+.sidebar {
+  height: auto;
+}
+
+body {
+  background-color: lightyellow;
+  width: 100%;
+  height: 100vh;
+  float: right;
+}
+
+.wrapper {
+}
+
+.form img {
+  margin-top: 50px;
+  width: 100%;
+  background-color: lightgrey;
+  border: 1px;
+  border-style: solid;
+  border-color: grey;
+}
+
+input {
+  margin: 25px 15px 20px 10px;
+  padding-left: 15px;
+  height: auto;
+  width: auto;
+  font-size: 18px;
+  background-color: beige;
+  border-color: lightgrey;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.image-container {
+  height: 80vh;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  width: 400px;
+  color: black;
+}
