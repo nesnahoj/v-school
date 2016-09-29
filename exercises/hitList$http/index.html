@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> My version-Hit List</title>
+</head>
+
+<!-- "__________CSS LINKS__________" -->
+<!--  bootstrap 3.3.7 cdn minified -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!--  Font Awesome 4.6.3 cdn minified -->
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<!--  Local CSS style tag  -->
+<link rel="stylesheet" type="text/css" href="./style.css">
+
+
+<!-- "__________MAIN CONTENT__________" -->
+<body ng-app="hits">
+  <div ng-controller="cntrl" ng-init="load()">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand not-quite-center" href="#"><i class="fa fa-level-up" aria-hidden="true"></i>LevelUp</a>
+         <img class="rose"/>
+       </div>
+       <div class="headTitle not-quite-center">
+         <p class="not-quite-center">Godfather's Hit List</p>
+       </div>
+       <div class="boutinierre">
+       </div>
+       <!-- .navbar-header -->
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+         </ul>
+         <form class="navbar-form navbar-left">
+         </form>
+         <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li><a href="#">HISTORY</a></li>
+               <li><a href="#">ABOUT</a></li>
+               <li><a href="#">CONTACT</a></li>
+             </ul> <!-- .dropdown-menu -->
+           </li> <!-- .dropdown -->
+         </ul> <!-- .nav navbar-nav navbar-right -->
+       </div> <!-- .collapse navbar-collapse -->
+      </div> <!-- /.container-fluid -->
+    </nav> <!-- /.navbar navbar-default -->
+    <div class="wrapper">
+      <div class="background">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2 quotes">
+              <h4>"I'm gonna make him an offer he can't refuse."</h4>
+              <h4>
+
+              </h4>
+              <h4>"Italians have a little joke, that the world is so hard a man must have two fathers to look after him, and that's why they have godfathers."</h4>
+              <h4>
+
+              </h4>
+              <h4>"Accidents don't happen to people who take accidents as a personal insult."</h4>
+              <h4>
+
+              </h4>
+              <h4>"Why should I be afraid now? Strange men have come to kill me ever since I was twelve years old."</h4>
+              <h4>
+
+              </h4>
+              <h4>"Never hate your enemies. It affects your judgment."</h4>
+              <h4>
+
+              </h4>
+              <h4>"Revenge is a dish that tastes best when served cold."</h4>
+            </div> <!-- .col-md-2 .quotes-->
+             <div class="col-md-6">
+               <div class="temp">
+                 <!-- empty -->
+               </div> <!-- .temp -->
+             </div> <!-- .col-md-6 -->
+            <div class="col-md-4">
+              <div ng-repeat="item in data track by $index" class="center">
+                <div class="atLarge">
+                  <h5 class="center">{{item.name}}</h5>
+                  <h5 class="center">{{item.image}}</h5>
+                  <button ng-click=removeItem($index) class="center">Remove Item</button>
+                </div> <!-- .atLarge -->
+              </div> <!-- ng-repeat .center -->
+            </div> <!-- .col-md-4 .offset-md-6 -->
+          </div> <!-- .row -->
+          <div class="row">
+            <div class="col-md-8 empty">
+              <div class="temp">
+                <!-- empty -->
+              </div> <!-- .temp -->
+            </div>  <!-- .col-md-8 -->
+            <div class="col-md-4">
+              <div ng-repeat="item in data track by $index" class="center">
+                <div class="completed">
+                  <h5 class="center">{{item.name}}</h5>
+                  <h5 class="center">{{item.image}}</h5>
+                  <button ng-click=removeItem($index) class="center">Remove Item</button>
+                </div> <!-- .completed -->
+              </div> <!-- ng-repeat .center -->
+            </div> <!-- .col-md-4 -->
+          </div> <!-- .row -->
+        </div> <!-- .container-fluid -->
+      </div> <!-- .background -->
+    </div> <!-- .wrapper -->
+  </div> <!-- .ng-controller -->
+
+
+<!-- "__________SCRIPT LINKS__________" -->
+  <!--  jQuery 2.x minified CDN Script Tag  -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <!-- Angular 1.5.8 minified script tag -->
+  <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+
+  <!-- Bootstrap 3.3.7 Javascript minified CDN Script Tag-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--  Local script tag  -->
+  <script src="./script.js"></script>
+
+  <!-- Form Cursor In Text Field -->
+  <!-- <script type="text/javascript">$(document).ready(function(){ document.homeform.input.focus();
+  });</script> -->
+</body>
+</html>
